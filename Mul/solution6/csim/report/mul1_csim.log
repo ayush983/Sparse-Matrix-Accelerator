@@ -1,0 +1,15 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../new_tb.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Ayush' on host 'msi' (Windows NT_amd64 version 6.2) on Fri Feb 05 10:41:21 +0530 2021
+INFO: [HLS 200-10] In directory 'D:/HLS_Projects/Mul/solution6/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../new_sparse(s5).c in debug mode
+csim.mk:90: recipe for target 'obj/new_sparse(s5).o' failed
+/usr/bin/sh: -c: line 0: syntax error near unexpected token `('
+/usr/bin/sh: -c: line 0: `cmd //c apcc.bat   -c -MMD  -I "D:/Xilinx/Vivado/2018.2/win64/tools/systemc/include" -I "D:/Xilinx/Vivado/2018.2/include" -I "D:/Xilinx/Vivado/2018.2/include/opencv" -I "D:/Xilinx/Vivado/2018.2/include/ap_sysc" -I "D:/Xilinx/Vivado/2018.2/common/technology/generic/SystemC" -I "D:/Xilinx/Vivado/2018.2/common/technology/generic/SystemC/AESL_FP_comp" -I "D:/Xilinx/Vivado/2018.2/common/technology/generic/SystemC/AESL_comp" -I "D:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include" -D__SIM_FPO__ -D__HLS_FPO_v6_1__ -D__SIM_OPENCV__ -D__SIM_FFT__ -D__SIM_FIR__ -D__SIM_DDS__ -D__DSP48E1__ -g -DNT -I . -I "D:/Xilinx/Vivado/2018.2/win64/tools/systemc/include" -I "D:/Xilinx/Vivado/2018.2/include" -I "D:/Xilinx/Vivado/2018.2/common/technology/generic/SystemC/AESL_comp" -DAUTOCC -D__xilinx_ip_top= -DAESL_TB -D__USE_XOPEN2K8 ../../../new_sparse(s5).c -o obj/new_sparse(s5).o ; \'
+make: *** [obj/new_sparse(s5).o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

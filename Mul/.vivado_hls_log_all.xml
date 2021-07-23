@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Mul" solutionName="solution5" date="2021-02-05T10:40:40.283+0530"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Mul" solutionName="solution5" date="2021-02-05T10:37:47.202+0530"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Mul" solutionName="solution5" date="2021-02-05T10:16:24.101+0530"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Mul" solutionName="solution5" date="2021-02-05T10:13:07.465+0530"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Mul" solutionName="solution5" date="2021-02-05T10:09:25.492+0530"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Mul" solutionName="solution5" date="2021-02-05T10:05:52.209+0530"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Mul" solutionName="solution5" date="2021-02-05T10:04:59.059+0530"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="Mul" solutionName="solution5" date="2021-02-05T10:01:53.112+0530"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_q1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.762+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_d1' to 0." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.743+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_d1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.724+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_we1' to 0." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.706+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_we1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.687+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_ce1' to 0." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.653+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_ce1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.638+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_address1' to 0." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.624+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_address1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.608+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_q0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.590+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_d0' to 0." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.574+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_d0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.561+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_we0' to 0." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.543+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_we0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.525+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_ce0' to 0." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.497+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_ce0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.468+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_address0' to 0." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.449+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_address0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution5" date="2021-02-04T23:35:10.432+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_q1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.260+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_d1' to 0." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.245+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_d1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.229+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_we1' to 0." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.215+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_we1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.204+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_ce1' to 0." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.187+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_ce1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.176+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_address1' to 0." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.166+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_address1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.156+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_q0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.145+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_d0' to 0." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.136+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_d0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.122+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_we0' to 0." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.112+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_we0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.102+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_ce0' to 0." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.092+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_ce0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.082+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_address0' to 0." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.073+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_address0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution4" date="2021-02-04T11:41:33.060+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_q1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.577+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_d1' to 0." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.566+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_d1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.551+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_we1' to 0." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.539+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_we1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.524+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_ce1' to 0." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.513+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_ce1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.502+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_address1' to 0." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.489+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_address1' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.474+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_q0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.459+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_d0' to 0." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.444+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_d0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.432+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_we0' to 0." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.419+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_we0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.405+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_ce0' to 0." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.392+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_ce0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.379+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'mul1/A_address0' to 0." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.367+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'mul1/A_address0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="Mul" solutionName="solution3" date="2021-02-04T11:40:50.347+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

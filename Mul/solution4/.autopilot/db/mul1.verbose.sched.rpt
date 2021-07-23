@@ -1,0 +1,338 @@
+
+
+================================================================
+== Vivado HLS Report for 'mul1'
+================================================================
+* Date:           Thu Feb  4 11:41:32 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Mul
+* Solution:       solution4
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.470|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   55|   55|   55|   55|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |   54|   54|         9|          -|          -|     6|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([64 x i32]* %A) nounwind, !map !7"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([64 x i32]* %B) nounwind, !map !13"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([64 x i32]* %C) nounwind, !map !17"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([18 x i32]* %sparse_new) nounwind, !map !21"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @mul1_str) nounwind"   --->   Operation 15 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.66ns)   --->   "br label %1" [Mul/new_sparse(s4).c:6]   --->   Operation 16 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 5.95>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%i = phi i3 [ 0, %0 ], [ %i_1, %2 ]"   --->   Operation 17 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.18ns)   --->   "%exitcond1 = icmp eq i3 %i, -2" [Mul/new_sparse(s4).c:6]   --->   Operation 18 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind"   --->   Operation 19 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (1.68ns)   --->   "%i_1 = add i3 %i, 1" [Mul/new_sparse(s4).c:6]   --->   Operation 20 'add' 'i_1' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %3, label %2" [Mul/new_sparse(s4).c:6]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_cast = zext i3 %i to i6" [Mul/new_sparse(s4).c:6]   --->   Operation 22 'zext' 'tmp_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_1 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %i, i2 0)" [Mul/new_sparse(s4).c:6]   --->   Operation 23 'bitconcatenate' 'tmp_1' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i5 %tmp_1 to i6" [Mul/new_sparse(s4).c:8]   --->   Operation 24 'zext' 'p_shl_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.86ns)   --->   "%tmp_2 = sub i6 %p_shl_cast, %tmp_cast" [Mul/new_sparse(s4).c:8]   --->   Operation 25 'sub' 'tmp_2' <Predicate = (!exitcond1)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_2_cast = sext i6 %tmp_2 to i64" [Mul/new_sparse(s4).c:8]   --->   Operation 26 'sext' 'tmp_2_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%sparse_new_addr = getelementptr [18 x i32]* %sparse_new, i64 0, i64 %tmp_2_cast" [Mul/new_sparse(s4).c:8]   --->   Operation 27 'getelementptr' 'sparse_new_addr' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.94ns)   --->   "%tmp_3 = add i6 1, %tmp_2" [Mul/new_sparse(s4).c:9]   --->   Operation 28 'add' 'tmp_3' <Predicate = (!exitcond1)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_3_cast = sext i6 %tmp_3 to i64" [Mul/new_sparse(s4).c:9]   --->   Operation 29 'sext' 'tmp_3_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%sparse_new_addr_1 = getelementptr [18 x i32]* %sparse_new, i64 0, i64 %tmp_3_cast" [Mul/new_sparse(s4).c:9]   --->   Operation 30 'getelementptr' 'sparse_new_addr_1' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 31 [2/2] (2.15ns)   --->   "%r = load i32* %sparse_new_addr, align 4" [Mul/new_sparse(s4).c:8]   --->   Operation 31 'load' 'r' <Predicate = (!exitcond1)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 32 [2/2] (2.15ns)   --->   "%c = load i32* %sparse_new_addr_1, align 4" [Mul/new_sparse(s4).c:9]   --->   Operation 32 'load' 'c' <Predicate = (!exitcond1)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "ret void" [Mul/new_sparse(s4).c:17]   --->   Operation 33 'ret' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 5.40>
+ST_3 : Operation 34 [1/1] (1.94ns)   --->   "%tmp_4 = add i6 2, %tmp_2" [Mul/new_sparse(s4).c:10]   --->   Operation 34 'add' 'tmp_4' <Predicate = true> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_4_cast = sext i6 %tmp_4 to i64" [Mul/new_sparse(s4).c:10]   --->   Operation 35 'sext' 'tmp_4_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%sparse_new_addr_2 = getelementptr [18 x i32]* %sparse_new, i64 0, i64 %tmp_4_cast" [Mul/new_sparse(s4).c:10]   --->   Operation 36 'getelementptr' 'sparse_new_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/2] (2.15ns)   --->   "%r = load i32* %sparse_new_addr, align 4" [Mul/new_sparse(s4).c:8]   --->   Operation 37 'load' 'r' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_3 : Operation 38 [1/2] (2.15ns)   --->   "%c = load i32* %sparse_new_addr_1, align 4" [Mul/new_sparse(s4).c:9]   --->   Operation 38 'load' 'c' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_3 : Operation 39 [2/2] (2.15ns)   --->   "%val = load i32* %sparse_new_addr_2, align 4" [Mul/new_sparse(s4).c:10]   --->   Operation 39 'load' 'val' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_7 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %c, i3 0)" [Mul/new_sparse(s4).c:9]   --->   Operation 40 'bitconcatenate' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_8 = sext i35 %tmp_7 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 41 'sext' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%tmp = trunc i32 %c to i5" [Mul/new_sparse(s4).c:9]   --->   Operation 42 'trunc' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_8_cast = call i8 @_ssdm_op_BitConcatenate.i8.i5.i3(i5 %tmp, i3 0)" [Mul/new_sparse(s4).c:14]   --->   Operation 43 'bitconcatenate' 'tmp_8_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%B_addr = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_8" [Mul/new_sparse(s4).c:14]   --->   Operation 44 'getelementptr' 'B_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_9 = or i8 %tmp_8_cast, 1" [Mul/new_sparse(s4).c:14]   --->   Operation 45 'or' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i8 %tmp_9 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 46 'zext' 'tmp_9_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%B_addr_1 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_9_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 47 'getelementptr' 'B_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_15 = call i35 @_ssdm_op_BitConcatenate.i35.i32.i3(i32 %r, i3 0)" [Mul/new_sparse(s4).c:8]   --->   Operation 48 'bitconcatenate' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_16 = sext i35 %tmp_15 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 49 'sext' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_17 = trunc i32 %r to i5" [Mul/new_sparse(s4).c:8]   --->   Operation 50 'trunc' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%tmp_17_cast = call i8 @_ssdm_op_BitConcatenate.i8.i5.i3(i5 %tmp_17, i3 0)" [Mul/new_sparse(s4).c:14]   --->   Operation 51 'bitconcatenate' 'tmp_17_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%C_addr = getelementptr [64 x i32]* %C, i64 0, i64 %tmp_16" [Mul/new_sparse(s4).c:14]   --->   Operation 52 'getelementptr' 'C_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_18 = or i8 %tmp_17_cast, 1" [Mul/new_sparse(s4).c:14]   --->   Operation 53 'or' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_18_cast = zext i8 %tmp_18 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 54 'zext' 'tmp_18_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%C_addr_1 = getelementptr [64 x i32]* %C, i64 0, i64 %tmp_18_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 55 'getelementptr' 'C_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [2/2] (3.25ns)   --->   "%B_load = load i32* %B_addr, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 56 'load' 'B_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_3 : Operation 57 [2/2] (3.25ns)   --->   "%C_load = load i32* %C_addr, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 57 'load' 'C_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_3 : Operation 58 [2/2] (3.25ns)   --->   "%B_load_1 = load i32* %B_addr_1, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 58 'load' 'B_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_3 : Operation 59 [2/2] (3.25ns)   --->   "%C_load_1 = load i32* %C_addr_1, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 59 'load' 'C_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 60 [1/2] (2.15ns)   --->   "%val = load i32* %sparse_new_addr_2, align 4" [Mul/new_sparse(s4).c:10]   --->   Operation 60 'load' 'val' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_s = or i8 %tmp_8_cast, 2" [Mul/new_sparse(s4).c:14]   --->   Operation 61 'or' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_10_cast = sext i8 %tmp_s to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 62 'sext' 'tmp_10_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%B_addr_2 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_10_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 63 'getelementptr' 'B_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_10 = or i8 %tmp_8_cast, 3" [Mul/new_sparse(s4).c:14]   --->   Operation 64 'or' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%tmp_11_cast = sext i8 %tmp_10 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 65 'sext' 'tmp_11_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%B_addr_3 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_11_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 66 'getelementptr' 'B_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_19 = or i8 %tmp_17_cast, 2" [Mul/new_sparse(s4).c:14]   --->   Operation 67 'or' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_19_cast = sext i8 %tmp_19 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 68 'sext' 'tmp_19_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%C_addr_2 = getelementptr [64 x i32]* %C, i64 0, i64 %tmp_19_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 69 'getelementptr' 'C_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_20 = or i8 %tmp_17_cast, 3" [Mul/new_sparse(s4).c:14]   --->   Operation 70 'or' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%tmp_20_cast = sext i8 %tmp_20 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 71 'sext' 'tmp_20_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%C_addr_3 = getelementptr [64 x i32]* %C, i64 0, i64 %tmp_20_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 72 'getelementptr' 'C_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 73 [1/2] (3.25ns)   --->   "%B_load = load i32* %B_addr, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 73 'load' 'B_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 74 [1/2] (3.25ns)   --->   "%C_load = load i32* %C_addr, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 74 'load' 'C_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 75 [1/2] (3.25ns)   --->   "%B_load_1 = load i32* %B_addr_1, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 75 'load' 'B_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 76 [1/2] (3.25ns)   --->   "%C_load_1 = load i32* %C_addr_1, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 76 'load' 'C_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 77 [2/2] (3.25ns)   --->   "%B_load_2 = load i32* %B_addr_2, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 77 'load' 'B_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 78 [2/2] (3.25ns)   --->   "%C_load_2 = load i32* %C_addr_2, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 78 'load' 'C_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 79 [2/2] (3.25ns)   --->   "%B_load_3 = load i32* %B_addr_3, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 79 'load' 'B_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 80 [2/2] (3.25ns)   --->   "%C_load_3 = load i32* %C_addr_3, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 80 'load' 'C_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 5 <SV = 4> <Delay = 8.47>
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%tmp_11 = or i8 %tmp_8_cast, 4" [Mul/new_sparse(s4).c:14]   --->   Operation 81 'or' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_12_cast = sext i8 %tmp_11 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 82 'sext' 'tmp_12_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%B_addr_4 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_12_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 83 'getelementptr' 'B_addr_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_12 = or i8 %tmp_8_cast, 5" [Mul/new_sparse(s4).c:14]   --->   Operation 84 'or' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_13_cast = sext i8 %tmp_12 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 85 'sext' 'tmp_13_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%B_addr_5 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_13_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 86 'getelementptr' 'B_addr_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_21 = or i8 %tmp_17_cast, 4" [Mul/new_sparse(s4).c:14]   --->   Operation 87 'or' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%tmp_21_cast = sext i8 %tmp_21 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 88 'sext' 'tmp_21_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%C_addr_4 = getelementptr [64 x i32]* %C, i64 0, i64 %tmp_21_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 89 'getelementptr' 'C_addr_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_22 = or i8 %tmp_17_cast, 5" [Mul/new_sparse(s4).c:14]   --->   Operation 90 'or' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_22_cast = sext i8 %tmp_22 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 91 'sext' 'tmp_22_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 92 [1/1] (0.00ns)   --->   "%C_addr_5 = getelementptr [64 x i32]* %C, i64 0, i64 %tmp_22_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 92 'getelementptr' 'C_addr_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 93 [1/1] (8.47ns)   --->   "%tmp_5 = mul nsw i32 %val, %B_load" [Mul/new_sparse(s4).c:14]   --->   Operation 93 'mul' 'tmp_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 94 [1/1] (8.47ns)   --->   "%tmp_5_1 = mul nsw i32 %val, %B_load_1" [Mul/new_sparse(s4).c:14]   --->   Operation 94 'mul' 'tmp_5_1' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 95 [1/2] (3.25ns)   --->   "%B_load_2 = load i32* %B_addr_2, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 95 'load' 'B_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 96 [1/2] (3.25ns)   --->   "%C_load_2 = load i32* %C_addr_2, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 96 'load' 'C_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 97 [1/2] (3.25ns)   --->   "%B_load_3 = load i32* %B_addr_3, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 97 'load' 'B_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 98 [1/2] (3.25ns)   --->   "%C_load_3 = load i32* %C_addr_3, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 98 'load' 'C_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 99 [2/2] (3.25ns)   --->   "%B_load_4 = load i32* %B_addr_4, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 99 'load' 'B_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 100 [2/2] (3.25ns)   --->   "%C_load_4 = load i32* %C_addr_4, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 100 'load' 'C_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 101 [2/2] (3.25ns)   --->   "%B_load_5 = load i32* %B_addr_5, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 101 'load' 'B_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 102 [2/2] (3.25ns)   --->   "%C_load_5 = load i32* %C_addr_5, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 102 'load' 'C_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 6 <SV = 5> <Delay = 8.47>
+ST_6 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_13 = or i8 %tmp_8_cast, 6" [Mul/new_sparse(s4).c:14]   --->   Operation 103 'or' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_14_cast = sext i8 %tmp_13 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 104 'sext' 'tmp_14_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 105 [1/1] (0.00ns)   --->   "%B_addr_6 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_14_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 105 'getelementptr' 'B_addr_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_14 = or i8 %tmp_8_cast, 7" [Mul/new_sparse(s4).c:14]   --->   Operation 106 'or' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_15_cast = sext i8 %tmp_14 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 107 'sext' 'tmp_15_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 108 [1/1] (0.00ns)   --->   "%B_addr_7 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_15_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 108 'getelementptr' 'B_addr_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 109 [1/1] (0.00ns)   --->   "%tmp_23 = or i8 %tmp_17_cast, 6" [Mul/new_sparse(s4).c:14]   --->   Operation 109 'or' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_23_cast = sext i8 %tmp_23 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 110 'sext' 'tmp_23_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 111 [1/1] (0.00ns)   --->   "%C_addr_6 = getelementptr [64 x i32]* %C, i64 0, i64 %tmp_23_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 111 'getelementptr' 'C_addr_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_24 = or i8 %tmp_17_cast, 7" [Mul/new_sparse(s4).c:14]   --->   Operation 112 'or' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 113 [1/1] (0.00ns)   --->   "%tmp_24_cast = sext i8 %tmp_24 to i64" [Mul/new_sparse(s4).c:14]   --->   Operation 113 'sext' 'tmp_24_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 114 [1/1] (0.00ns)   --->   "%C_addr_7 = getelementptr [64 x i32]* %C, i64 0, i64 %tmp_24_cast" [Mul/new_sparse(s4).c:14]   --->   Operation 114 'getelementptr' 'C_addr_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 115 [1/1] (2.70ns)   --->   "%tmp_6 = add nsw i32 %C_load, %tmp_5" [Mul/new_sparse(s4).c:14]   --->   Operation 115 'add' 'tmp_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 116 [1/1] (2.70ns)   --->   "%tmp_6_1 = add nsw i32 %C_load_1, %tmp_5_1" [Mul/new_sparse(s4).c:14]   --->   Operation 116 'add' 'tmp_6_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 117 [1/1] (8.47ns)   --->   "%tmp_5_2 = mul nsw i32 %val, %B_load_2" [Mul/new_sparse(s4).c:14]   --->   Operation 117 'mul' 'tmp_5_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 118 [1/1] (8.47ns)   --->   "%tmp_5_3 = mul nsw i32 %val, %B_load_3" [Mul/new_sparse(s4).c:14]   --->   Operation 118 'mul' 'tmp_5_3' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 119 [1/2] (3.25ns)   --->   "%B_load_4 = load i32* %B_addr_4, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 119 'load' 'B_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 120 [1/2] (3.25ns)   --->   "%C_load_4 = load i32* %C_addr_4, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 120 'load' 'C_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 121 [1/2] (3.25ns)   --->   "%B_load_5 = load i32* %B_addr_5, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 121 'load' 'B_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 122 [1/2] (3.25ns)   --->   "%C_load_5 = load i32* %C_addr_5, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 122 'load' 'C_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 123 [2/2] (3.25ns)   --->   "%B_load_6 = load i32* %B_addr_6, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 123 'load' 'B_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 124 [2/2] (3.25ns)   --->   "%C_load_6 = load i32* %C_addr_6, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 124 'load' 'C_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 125 [2/2] (3.25ns)   --->   "%B_load_7 = load i32* %B_addr_7, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 125 'load' 'B_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 126 [2/2] (3.25ns)   --->   "%C_load_7 = load i32* %C_addr_7, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 126 'load' 'C_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 7 <SV = 6> <Delay = 8.47>
+ST_7 : Operation 127 [1/1] (3.25ns)   --->   "store i32 %tmp_6, i32* %C_addr, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 127 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_7 : Operation 128 [1/1] (3.25ns)   --->   "store i32 %tmp_6_1, i32* %C_addr_1, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 128 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_7 : Operation 129 [1/1] (2.70ns)   --->   "%tmp_6_2 = add nsw i32 %C_load_2, %tmp_5_2" [Mul/new_sparse(s4).c:14]   --->   Operation 129 'add' 'tmp_6_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 130 [1/1] (2.70ns)   --->   "%tmp_6_3 = add nsw i32 %C_load_3, %tmp_5_3" [Mul/new_sparse(s4).c:14]   --->   Operation 130 'add' 'tmp_6_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 131 [1/1] (8.47ns)   --->   "%tmp_5_4 = mul nsw i32 %val, %B_load_4" [Mul/new_sparse(s4).c:14]   --->   Operation 131 'mul' 'tmp_5_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 132 [1/1] (8.47ns)   --->   "%tmp_5_5 = mul nsw i32 %val, %B_load_5" [Mul/new_sparse(s4).c:14]   --->   Operation 132 'mul' 'tmp_5_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 133 [1/2] (3.25ns)   --->   "%B_load_6 = load i32* %B_addr_6, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 133 'load' 'B_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_7 : Operation 134 [1/2] (3.25ns)   --->   "%C_load_6 = load i32* %C_addr_6, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 134 'load' 'C_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_7 : Operation 135 [1/2] (3.25ns)   --->   "%B_load_7 = load i32* %B_addr_7, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 135 'load' 'B_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_7 : Operation 136 [1/2] (3.25ns)   --->   "%C_load_7 = load i32* %C_addr_7, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 136 'load' 'C_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 8 <SV = 7> <Delay = 8.47>
+ST_8 : Operation 137 [1/1] (3.25ns)   --->   "store i32 %tmp_6_2, i32* %C_addr_2, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 137 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_8 : Operation 138 [1/1] (3.25ns)   --->   "store i32 %tmp_6_3, i32* %C_addr_3, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 138 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_8 : Operation 139 [1/1] (2.70ns)   --->   "%tmp_6_4 = add nsw i32 %C_load_4, %tmp_5_4" [Mul/new_sparse(s4).c:14]   --->   Operation 139 'add' 'tmp_6_4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 140 [1/1] (2.70ns)   --->   "%tmp_6_5 = add nsw i32 %C_load_5, %tmp_5_5" [Mul/new_sparse(s4).c:14]   --->   Operation 140 'add' 'tmp_6_5' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 141 [1/1] (8.47ns)   --->   "%tmp_5_6 = mul nsw i32 %val, %B_load_6" [Mul/new_sparse(s4).c:14]   --->   Operation 141 'mul' 'tmp_5_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 142 [1/1] (8.47ns)   --->   "%tmp_5_7 = mul nsw i32 %val, %B_load_7" [Mul/new_sparse(s4).c:14]   --->   Operation 142 'mul' 'tmp_5_7' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 3.25>
+ST_9 : Operation 143 [1/1] (3.25ns)   --->   "store i32 %tmp_6_4, i32* %C_addr_4, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 143 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_9 : Operation 144 [1/1] (3.25ns)   --->   "store i32 %tmp_6_5, i32* %C_addr_5, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 144 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_9 : Operation 145 [1/1] (2.70ns)   --->   "%tmp_6_6 = add nsw i32 %C_load_6, %tmp_5_6" [Mul/new_sparse(s4).c:14]   --->   Operation 145 'add' 'tmp_6_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 146 [1/1] (2.70ns)   --->   "%tmp_6_7 = add nsw i32 %C_load_7, %tmp_5_7" [Mul/new_sparse(s4).c:14]   --->   Operation 146 'add' 'tmp_6_7' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 3.25>
+ST_10 : Operation 147 [1/1] (3.25ns)   --->   "store i32 %tmp_6_6, i32* %C_addr_6, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 147 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_10 : Operation 148 [1/1] (3.25ns)   --->   "store i32 %tmp_6_7, i32* %C_addr_7, align 4" [Mul/new_sparse(s4).c:14]   --->   Operation 148 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_10 : Operation 149 [1/1] (0.00ns)   --->   "br label %1" [Mul/new_sparse(s4).c:6]   --->   Operation 149 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', Mul/new_sparse(s4).c:6) [12]  (1.66 ns)
+
+ <State 2>: 5.96ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', Mul/new_sparse(s4).c:6) [12]  (0 ns)
+	'sub' operation ('tmp_2', Mul/new_sparse(s4).c:8) [21]  (1.86 ns)
+	'add' operation ('tmp_3', Mul/new_sparse(s4).c:9) [24]  (1.95 ns)
+	'getelementptr' operation ('sparse_new_addr_1', Mul/new_sparse(s4).c:9) [26]  (0 ns)
+	'load' operation ('c', Mul/new_sparse(s4).c:9) on array 'sparse_new' [31]  (2.15 ns)
+
+ <State 3>: 5.41ns
+The critical path consists of the following:
+	'load' operation ('r', Mul/new_sparse(s4).c:8) on array 'sparse_new' [30]  (2.15 ns)
+	'getelementptr' operation ('C_addr', Mul/new_sparse(s4).c:14) [63]  (0 ns)
+	'load' operation ('C_load', Mul/new_sparse(s4).c:14) on array 'C' [87]  (3.26 ns)
+
+ <State 4>: 3.26ns
+The critical path consists of the following:
+	'or' operation ('tmp_s', Mul/new_sparse(s4).c:14) [41]  (0 ns)
+	'getelementptr' operation ('B_addr_2', Mul/new_sparse(s4).c:14) [43]  (0 ns)
+	'load' operation ('B_load_2', Mul/new_sparse(s4).c:14) on array 'B' [95]  (3.26 ns)
+
+ <State 5>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5', Mul/new_sparse(s4).c:14) [86]  (8.47 ns)
+
+ <State 6>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_2', Mul/new_sparse(s4).c:14) [96]  (8.47 ns)
+
+ <State 7>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_4', Mul/new_sparse(s4).c:14) [106]  (8.47 ns)
+
+ <State 8>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_6', Mul/new_sparse(s4).c:14) [116]  (8.47 ns)
+
+ <State 9>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/new_sparse(s4).c:14) of variable 'tmp_6_4', Mul/new_sparse(s4).c:14 on array 'C' [109]  (3.26 ns)
+
+ <State 10>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/new_sparse(s4).c:14) of variable 'tmp_6_6', Mul/new_sparse(s4).c:14 on array 'C' [119]  (3.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

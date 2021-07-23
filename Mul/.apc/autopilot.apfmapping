@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="new_sparse(s5).c" path="D:\HLS_Projects\Mul\new_sparse(s5).c"/>
+  </source>
+  <testbench>
+    <originFiles name="new_tb.c" path="D:\HLS_Projects\Mul\new_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

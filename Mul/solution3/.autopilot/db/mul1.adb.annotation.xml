@@ -1,0 +1,28 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="13" filename="Mul/new_sparse(s3).c" linenumber="6" name="exitcond1" contextFuncName="mul1" moduleName="mul1" rtlName="exitcond1_fu_124_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="15" filename="Mul/new_sparse(s3).c" linenumber="6" name="i_1" contextFuncName="mul1" moduleName="mul1" rtlName="i_1_fu_130_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="18" filename="Mul/new_sparse(s3).c" linenumber="6" name="tmp_cast" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_cast_fu_136_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="19" filename="Mul/new_sparse(s3).c" linenumber="6" name="tmp_1" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_1_fu_140_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="20" filename="Mul/new_sparse(s3).c" linenumber="8" name="p_shl_cast" contextFuncName="mul1" moduleName="mul1" rtlName="p_shl_cast_fu_148_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="21" filename="Mul/new_sparse(s3).c" linenumber="8" name="tmp_2" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_2_fu_152_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="22" filename="Mul/new_sparse(s3).c" linenumber="8" name="tmp_2_cast" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_2_cast_fu_158_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="24" filename="Mul/new_sparse(s3).c" linenumber="9" name="tmp_3" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_3_fu_163_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="25" filename="Mul/new_sparse(s3).c" linenumber="9" name="tmp_3_cast" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_3_cast_fu_168_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="27" filename="Mul/new_sparse(s3).c" linenumber="10" name="tmp_7" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_7_fu_173_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="28" filename="Mul/new_sparse(s3).c" linenumber="10" name="tmp_7_cast" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_7_cast_fu_178_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="33" filename="Mul/new_sparse(s3).c" linenumber="9" name="tmp" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_fu_187_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="34" filename="Mul/new_sparse(s3).c" linenumber="9" name="tmp_9_cast" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_9_cast_fu_191_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="35" filename="Mul/new_sparse(s3).c" linenumber="8" name="tmp_4" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_4_fu_183_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="36" filename="Mul/new_sparse(s3).c" linenumber="11" name="tmp_11_cast" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_11_cast_fu_199_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="40" filename="Mul/new_sparse(s3).c" linenumber="11" name="exitcond" contextFuncName="mul1" moduleName="mul1" rtlName="exitcond_fu_206_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="42" filename="Mul/new_sparse(s3).c" linenumber="11" name="j_1" contextFuncName="mul1" moduleName="mul1" rtlName="j_1_fu_212_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="45" filename="Mul/new_sparse(s3).c" linenumber="13" name="tmp_4_cast" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_4_cast_fu_218_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="46" filename="Mul/new_sparse(s3).c" linenumber="13" name="tmp_s" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_s_fu_222_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="47" filename="Mul/new_sparse(s3).c" linenumber="13" name="tmp_12_cast" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_12_cast_fu_227_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="49" filename="Mul/new_sparse(s3).c" linenumber="13" name="tmp_8" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_8_fu_232_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="50" filename="Mul/new_sparse(s3).c" linenumber="13" name="tmp_13_cast" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_13_cast_fu_237_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="53" filename="Mul/new_sparse(s3).c" linenumber="13" name="tmp_5" contextFuncName="mul1" moduleName="mul1" rtlName="tmp_5_fu_242_p2" latency="0" BRAM="-1" DSP="3" FF="0" LUT="21" fileDirectory="D:\HLS_Projects"><\/item>
+<item  id="55" filename="Mul/new_sparse(s3).c" linenumber="13" name="tmp_6" contextFuncName="mul1" moduleName="mul1" rtlName="C_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="D:\HLS_Projects"><\/item>
+<\/annotationInfo>
+</annotationInfo>

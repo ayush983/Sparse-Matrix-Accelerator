@@ -1,0 +1,1163 @@
+
+
+================================================================
+== Vivado HLS Report for 'mul1'
+================================================================
+* Date:           Thu Feb  4 11:38:28 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Mul
+* Solution:       solution2
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.470|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  513|  513|  513|  513|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  512|  512|        64|          -|          -|     8|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 65
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond2)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%C_addr = getelementptr [64 x i32]* %C, i64 0, i64 0" [Mul/modified_algo(s2).c:16]   --->   Operation 66 'getelementptr' 'C_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%C_addr_1 = getelementptr [64 x i32]* %C, i64 0, i64 1" [Mul/modified_algo(s2).c:16]   --->   Operation 67 'getelementptr' 'C_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%C_addr_2 = getelementptr [64 x i32]* %C, i64 0, i64 2" [Mul/modified_algo(s2).c:16]   --->   Operation 68 'getelementptr' 'C_addr_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%C_addr_3 = getelementptr [64 x i32]* %C, i64 0, i64 3" [Mul/modified_algo(s2).c:16]   --->   Operation 69 'getelementptr' 'C_addr_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%C_addr_4 = getelementptr [64 x i32]* %C, i64 0, i64 4" [Mul/modified_algo(s2).c:16]   --->   Operation 70 'getelementptr' 'C_addr_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%C_addr_5 = getelementptr [64 x i32]* %C, i64 0, i64 5" [Mul/modified_algo(s2).c:16]   --->   Operation 71 'getelementptr' 'C_addr_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%C_addr_6 = getelementptr [64 x i32]* %C, i64 0, i64 6" [Mul/modified_algo(s2).c:16]   --->   Operation 72 'getelementptr' 'C_addr_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%C_addr_7 = getelementptr [64 x i32]* %C, i64 0, i64 7" [Mul/modified_algo(s2).c:16]   --->   Operation 73 'getelementptr' 'C_addr_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%C_addr_8 = getelementptr [64 x i32]* %C, i64 0, i64 8" [Mul/modified_algo(s2).c:16]   --->   Operation 74 'getelementptr' 'C_addr_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%C_addr_9 = getelementptr [64 x i32]* %C, i64 0, i64 9" [Mul/modified_algo(s2).c:16]   --->   Operation 75 'getelementptr' 'C_addr_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%C_addr_10 = getelementptr [64 x i32]* %C, i64 0, i64 10" [Mul/modified_algo(s2).c:16]   --->   Operation 76 'getelementptr' 'C_addr_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%C_addr_11 = getelementptr [64 x i32]* %C, i64 0, i64 11" [Mul/modified_algo(s2).c:16]   --->   Operation 77 'getelementptr' 'C_addr_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%C_addr_12 = getelementptr [64 x i32]* %C, i64 0, i64 12" [Mul/modified_algo(s2).c:16]   --->   Operation 78 'getelementptr' 'C_addr_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%C_addr_13 = getelementptr [64 x i32]* %C, i64 0, i64 13" [Mul/modified_algo(s2).c:16]   --->   Operation 79 'getelementptr' 'C_addr_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%C_addr_14 = getelementptr [64 x i32]* %C, i64 0, i64 14" [Mul/modified_algo(s2).c:16]   --->   Operation 80 'getelementptr' 'C_addr_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%C_addr_15 = getelementptr [64 x i32]* %C, i64 0, i64 15" [Mul/modified_algo(s2).c:16]   --->   Operation 81 'getelementptr' 'C_addr_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%C_addr_16 = getelementptr [64 x i32]* %C, i64 0, i64 16" [Mul/modified_algo(s2).c:16]   --->   Operation 82 'getelementptr' 'C_addr_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%C_addr_17 = getelementptr [64 x i32]* %C, i64 0, i64 17" [Mul/modified_algo(s2).c:16]   --->   Operation 83 'getelementptr' 'C_addr_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%C_addr_18 = getelementptr [64 x i32]* %C, i64 0, i64 18" [Mul/modified_algo(s2).c:16]   --->   Operation 84 'getelementptr' 'C_addr_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%C_addr_19 = getelementptr [64 x i32]* %C, i64 0, i64 19" [Mul/modified_algo(s2).c:16]   --->   Operation 85 'getelementptr' 'C_addr_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%C_addr_20 = getelementptr [64 x i32]* %C, i64 0, i64 20" [Mul/modified_algo(s2).c:16]   --->   Operation 86 'getelementptr' 'C_addr_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%C_addr_21 = getelementptr [64 x i32]* %C, i64 0, i64 21" [Mul/modified_algo(s2).c:16]   --->   Operation 87 'getelementptr' 'C_addr_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%C_addr_22 = getelementptr [64 x i32]* %C, i64 0, i64 22" [Mul/modified_algo(s2).c:16]   --->   Operation 88 'getelementptr' 'C_addr_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%C_addr_23 = getelementptr [64 x i32]* %C, i64 0, i64 23" [Mul/modified_algo(s2).c:16]   --->   Operation 89 'getelementptr' 'C_addr_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%C_addr_24 = getelementptr [64 x i32]* %C, i64 0, i64 24" [Mul/modified_algo(s2).c:16]   --->   Operation 90 'getelementptr' 'C_addr_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%C_addr_25 = getelementptr [64 x i32]* %C, i64 0, i64 25" [Mul/modified_algo(s2).c:16]   --->   Operation 91 'getelementptr' 'C_addr_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%C_addr_26 = getelementptr [64 x i32]* %C, i64 0, i64 26" [Mul/modified_algo(s2).c:16]   --->   Operation 92 'getelementptr' 'C_addr_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%C_addr_27 = getelementptr [64 x i32]* %C, i64 0, i64 27" [Mul/modified_algo(s2).c:16]   --->   Operation 93 'getelementptr' 'C_addr_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%C_addr_28 = getelementptr [64 x i32]* %C, i64 0, i64 28" [Mul/modified_algo(s2).c:16]   --->   Operation 94 'getelementptr' 'C_addr_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%C_addr_29 = getelementptr [64 x i32]* %C, i64 0, i64 29" [Mul/modified_algo(s2).c:16]   --->   Operation 95 'getelementptr' 'C_addr_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%C_addr_30 = getelementptr [64 x i32]* %C, i64 0, i64 30" [Mul/modified_algo(s2).c:16]   --->   Operation 96 'getelementptr' 'C_addr_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%C_addr_31 = getelementptr [64 x i32]* %C, i64 0, i64 31" [Mul/modified_algo(s2).c:16]   --->   Operation 97 'getelementptr' 'C_addr_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%C_addr_32 = getelementptr [64 x i32]* %C, i64 0, i64 32" [Mul/modified_algo(s2).c:16]   --->   Operation 98 'getelementptr' 'C_addr_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%C_addr_33 = getelementptr [64 x i32]* %C, i64 0, i64 33" [Mul/modified_algo(s2).c:16]   --->   Operation 99 'getelementptr' 'C_addr_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%C_addr_34 = getelementptr [64 x i32]* %C, i64 0, i64 34" [Mul/modified_algo(s2).c:16]   --->   Operation 100 'getelementptr' 'C_addr_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%C_addr_35 = getelementptr [64 x i32]* %C, i64 0, i64 35" [Mul/modified_algo(s2).c:16]   --->   Operation 101 'getelementptr' 'C_addr_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%C_addr_36 = getelementptr [64 x i32]* %C, i64 0, i64 36" [Mul/modified_algo(s2).c:16]   --->   Operation 102 'getelementptr' 'C_addr_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%C_addr_37 = getelementptr [64 x i32]* %C, i64 0, i64 37" [Mul/modified_algo(s2).c:16]   --->   Operation 103 'getelementptr' 'C_addr_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%C_addr_38 = getelementptr [64 x i32]* %C, i64 0, i64 38" [Mul/modified_algo(s2).c:16]   --->   Operation 104 'getelementptr' 'C_addr_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%C_addr_39 = getelementptr [64 x i32]* %C, i64 0, i64 39" [Mul/modified_algo(s2).c:16]   --->   Operation 105 'getelementptr' 'C_addr_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%C_addr_40 = getelementptr [64 x i32]* %C, i64 0, i64 40" [Mul/modified_algo(s2).c:16]   --->   Operation 106 'getelementptr' 'C_addr_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%C_addr_41 = getelementptr [64 x i32]* %C, i64 0, i64 41" [Mul/modified_algo(s2).c:16]   --->   Operation 107 'getelementptr' 'C_addr_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%C_addr_42 = getelementptr [64 x i32]* %C, i64 0, i64 42" [Mul/modified_algo(s2).c:16]   --->   Operation 108 'getelementptr' 'C_addr_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%C_addr_43 = getelementptr [64 x i32]* %C, i64 0, i64 43" [Mul/modified_algo(s2).c:16]   --->   Operation 109 'getelementptr' 'C_addr_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%C_addr_44 = getelementptr [64 x i32]* %C, i64 0, i64 44" [Mul/modified_algo(s2).c:16]   --->   Operation 110 'getelementptr' 'C_addr_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%C_addr_45 = getelementptr [64 x i32]* %C, i64 0, i64 45" [Mul/modified_algo(s2).c:16]   --->   Operation 111 'getelementptr' 'C_addr_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%C_addr_46 = getelementptr [64 x i32]* %C, i64 0, i64 46" [Mul/modified_algo(s2).c:16]   --->   Operation 112 'getelementptr' 'C_addr_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%C_addr_47 = getelementptr [64 x i32]* %C, i64 0, i64 47" [Mul/modified_algo(s2).c:16]   --->   Operation 113 'getelementptr' 'C_addr_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%C_addr_48 = getelementptr [64 x i32]* %C, i64 0, i64 48" [Mul/modified_algo(s2).c:16]   --->   Operation 114 'getelementptr' 'C_addr_48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%C_addr_49 = getelementptr [64 x i32]* %C, i64 0, i64 49" [Mul/modified_algo(s2).c:16]   --->   Operation 115 'getelementptr' 'C_addr_49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%C_addr_50 = getelementptr [64 x i32]* %C, i64 0, i64 50" [Mul/modified_algo(s2).c:16]   --->   Operation 116 'getelementptr' 'C_addr_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%C_addr_51 = getelementptr [64 x i32]* %C, i64 0, i64 51" [Mul/modified_algo(s2).c:16]   --->   Operation 117 'getelementptr' 'C_addr_51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%C_addr_52 = getelementptr [64 x i32]* %C, i64 0, i64 52" [Mul/modified_algo(s2).c:16]   --->   Operation 118 'getelementptr' 'C_addr_52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%C_addr_53 = getelementptr [64 x i32]* %C, i64 0, i64 53" [Mul/modified_algo(s2).c:16]   --->   Operation 119 'getelementptr' 'C_addr_53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%C_addr_54 = getelementptr [64 x i32]* %C, i64 0, i64 54" [Mul/modified_algo(s2).c:16]   --->   Operation 120 'getelementptr' 'C_addr_54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%C_addr_55 = getelementptr [64 x i32]* %C, i64 0, i64 55" [Mul/modified_algo(s2).c:16]   --->   Operation 121 'getelementptr' 'C_addr_55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%C_addr_56 = getelementptr [64 x i32]* %C, i64 0, i64 56" [Mul/modified_algo(s2).c:16]   --->   Operation 122 'getelementptr' 'C_addr_56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%C_addr_57 = getelementptr [64 x i32]* %C, i64 0, i64 57" [Mul/modified_algo(s2).c:16]   --->   Operation 123 'getelementptr' 'C_addr_57' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%C_addr_58 = getelementptr [64 x i32]* %C, i64 0, i64 58" [Mul/modified_algo(s2).c:16]   --->   Operation 124 'getelementptr' 'C_addr_58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%C_addr_59 = getelementptr [64 x i32]* %C, i64 0, i64 59" [Mul/modified_algo(s2).c:16]   --->   Operation 125 'getelementptr' 'C_addr_59' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%C_addr_60 = getelementptr [64 x i32]* %C, i64 0, i64 60" [Mul/modified_algo(s2).c:16]   --->   Operation 126 'getelementptr' 'C_addr_60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%C_addr_61 = getelementptr [64 x i32]* %C, i64 0, i64 61" [Mul/modified_algo(s2).c:16]   --->   Operation 127 'getelementptr' 'C_addr_61' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%C_addr_62 = getelementptr [64 x i32]* %C, i64 0, i64 62" [Mul/modified_algo(s2).c:16]   --->   Operation 128 'getelementptr' 'C_addr_62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%C_addr_63 = getelementptr [64 x i32]* %C, i64 0, i64 63" [Mul/modified_algo(s2).c:16]   --->   Operation 129 'getelementptr' 'C_addr_63' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([64 x i32]* %A) nounwind, !map !7"   --->   Operation 130 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([64 x i32]* %B) nounwind, !map !13"   --->   Operation 131 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([64 x i32]* %C) nounwind, !map !17"   --->   Operation 132 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @mul1_str) nounwind"   --->   Operation 133 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (1.66ns)   --->   "br label %1" [Mul/modified_algo(s2).c:7]   --->   Operation 134 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 135 [1/1] (0.00ns)   --->   "%k = phi i4 [ 0, %0 ], [ %k_1, %.preheader.preheader ]"   --->   Operation 135 'phi' 'k' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 136 [1/1] (1.44ns)   --->   "%exitcond2 = icmp eq i4 %k, -8" [Mul/modified_algo(s2).c:7]   --->   Operation 136 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind"   --->   Operation 137 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 138 [1/1] (1.77ns)   --->   "%k_1 = add i4 %k, 1" [Mul/modified_algo(s2).c:7]   --->   Operation 138 'add' 'k_1' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %2, label %.preheader.preheader" [Mul/modified_algo(s2).c:7]   --->   Operation 139 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 140 [2/2] (3.25ns)   --->   "%C_load = load i32* %C_addr, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 140 'load' 'C_load' <Predicate = (!exitcond2)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 141 [2/2] (3.25ns)   --->   "%C_load_1 = load i32* %C_addr_1, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 141 'load' 'C_load_1' <Predicate = (!exitcond2)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_2 : Operation 142 [1/1] (0.00ns)   --->   "ret void" [Mul/modified_algo(s2).c:20]   --->   Operation 142 'ret' <Predicate = (exitcond2)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 143 [1/2] (3.25ns)   --->   "%C_load = load i32* %C_addr, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 143 'load' 'C_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_3 : Operation 144 [1/2] (3.25ns)   --->   "%C_load_1 = load i32* %C_addr_1, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 144 'load' 'C_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_3 : Operation 145 [2/2] (3.25ns)   --->   "%C_load_2 = load i32* %C_addr_2, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 145 'load' 'C_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_3 : Operation 146 [2/2] (3.25ns)   --->   "%C_load_3 = load i32* %C_addr_3, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 146 'load' 'C_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 147 [1/2] (3.25ns)   --->   "%C_load_2 = load i32* %C_addr_2, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 147 'load' 'C_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 148 [1/2] (3.25ns)   --->   "%C_load_3 = load i32* %C_addr_3, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 148 'load' 'C_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 149 [2/2] (3.25ns)   --->   "%C_load_4 = load i32* %C_addr_4, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 149 'load' 'C_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_4 : Operation 150 [2/2] (3.25ns)   --->   "%C_load_5 = load i32* %C_addr_5, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 150 'load' 'C_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 5 <SV = 4> <Delay = 3.25>
+ST_5 : Operation 151 [1/2] (3.25ns)   --->   "%C_load_4 = load i32* %C_addr_4, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 151 'load' 'C_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 152 [1/2] (3.25ns)   --->   "%C_load_5 = load i32* %C_addr_5, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 152 'load' 'C_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 153 [2/2] (3.25ns)   --->   "%C_load_6 = load i32* %C_addr_6, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 153 'load' 'C_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_5 : Operation 154 [2/2] (3.25ns)   --->   "%C_load_7 = load i32* %C_addr_7, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 154 'load' 'C_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 155 [1/2] (3.25ns)   --->   "%C_load_6 = load i32* %C_addr_6, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 155 'load' 'C_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 156 [1/2] (3.25ns)   --->   "%C_load_7 = load i32* %C_addr_7, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 156 'load' 'C_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 157 [2/2] (3.25ns)   --->   "%C_load_8 = load i32* %C_addr_8, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 157 'load' 'C_load_8' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_6 : Operation 158 [2/2] (3.25ns)   --->   "%C_load_9 = load i32* %C_addr_9, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 158 'load' 'C_load_9' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 7 <SV = 6> <Delay = 3.25>
+ST_7 : Operation 159 [1/2] (3.25ns)   --->   "%C_load_8 = load i32* %C_addr_8, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 159 'load' 'C_load_8' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_7 : Operation 160 [1/2] (3.25ns)   --->   "%C_load_9 = load i32* %C_addr_9, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 160 'load' 'C_load_9' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_7 : Operation 161 [2/2] (3.25ns)   --->   "%C_load_10 = load i32* %C_addr_10, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 161 'load' 'C_load_10' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_7 : Operation 162 [2/2] (3.25ns)   --->   "%C_load_11 = load i32* %C_addr_11, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 162 'load' 'C_load_11' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 8 <SV = 7> <Delay = 3.25>
+ST_8 : Operation 163 [1/2] (3.25ns)   --->   "%C_load_10 = load i32* %C_addr_10, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 163 'load' 'C_load_10' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_8 : Operation 164 [1/2] (3.25ns)   --->   "%C_load_11 = load i32* %C_addr_11, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 164 'load' 'C_load_11' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_8 : Operation 165 [2/2] (3.25ns)   --->   "%C_load_12 = load i32* %C_addr_12, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 165 'load' 'C_load_12' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_8 : Operation 166 [2/2] (3.25ns)   --->   "%C_load_13 = load i32* %C_addr_13, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 166 'load' 'C_load_13' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 9 <SV = 8> <Delay = 3.25>
+ST_9 : Operation 167 [1/2] (3.25ns)   --->   "%C_load_12 = load i32* %C_addr_12, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 167 'load' 'C_load_12' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_9 : Operation 168 [1/2] (3.25ns)   --->   "%C_load_13 = load i32* %C_addr_13, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 168 'load' 'C_load_13' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_9 : Operation 169 [2/2] (3.25ns)   --->   "%C_load_14 = load i32* %C_addr_14, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 169 'load' 'C_load_14' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_9 : Operation 170 [2/2] (3.25ns)   --->   "%C_load_15 = load i32* %C_addr_15, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 170 'load' 'C_load_15' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 10 <SV = 9> <Delay = 3.25>
+ST_10 : Operation 171 [1/2] (3.25ns)   --->   "%C_load_14 = load i32* %C_addr_14, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 171 'load' 'C_load_14' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_10 : Operation 172 [1/2] (3.25ns)   --->   "%C_load_15 = load i32* %C_addr_15, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 172 'load' 'C_load_15' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_10 : Operation 173 [2/2] (3.25ns)   --->   "%C_load_16 = load i32* %C_addr_16, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 173 'load' 'C_load_16' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_10 : Operation 174 [2/2] (3.25ns)   --->   "%C_load_17 = load i32* %C_addr_17, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 174 'load' 'C_load_17' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 11 <SV = 10> <Delay = 3.25>
+ST_11 : Operation 175 [1/2] (3.25ns)   --->   "%C_load_16 = load i32* %C_addr_16, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 175 'load' 'C_load_16' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_11 : Operation 176 [1/2] (3.25ns)   --->   "%C_load_17 = load i32* %C_addr_17, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 176 'load' 'C_load_17' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_11 : Operation 177 [2/2] (3.25ns)   --->   "%C_load_18 = load i32* %C_addr_18, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 177 'load' 'C_load_18' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_11 : Operation 178 [2/2] (3.25ns)   --->   "%C_load_19 = load i32* %C_addr_19, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 178 'load' 'C_load_19' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 12 <SV = 11> <Delay = 3.25>
+ST_12 : Operation 179 [1/2] (3.25ns)   --->   "%C_load_18 = load i32* %C_addr_18, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 179 'load' 'C_load_18' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_12 : Operation 180 [1/2] (3.25ns)   --->   "%C_load_19 = load i32* %C_addr_19, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 180 'load' 'C_load_19' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_12 : Operation 181 [2/2] (3.25ns)   --->   "%C_load_20 = load i32* %C_addr_20, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 181 'load' 'C_load_20' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_12 : Operation 182 [2/2] (3.25ns)   --->   "%C_load_21 = load i32* %C_addr_21, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 182 'load' 'C_load_21' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 13 <SV = 12> <Delay = 3.25>
+ST_13 : Operation 183 [1/2] (3.25ns)   --->   "%C_load_20 = load i32* %C_addr_20, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 183 'load' 'C_load_20' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_13 : Operation 184 [1/2] (3.25ns)   --->   "%C_load_21 = load i32* %C_addr_21, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 184 'load' 'C_load_21' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_13 : Operation 185 [2/2] (3.25ns)   --->   "%C_load_22 = load i32* %C_addr_22, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 185 'load' 'C_load_22' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_13 : Operation 186 [2/2] (3.25ns)   --->   "%C_load_23 = load i32* %C_addr_23, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 186 'load' 'C_load_23' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 14 <SV = 13> <Delay = 3.25>
+ST_14 : Operation 187 [1/2] (3.25ns)   --->   "%C_load_22 = load i32* %C_addr_22, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 187 'load' 'C_load_22' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_14 : Operation 188 [1/2] (3.25ns)   --->   "%C_load_23 = load i32* %C_addr_23, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 188 'load' 'C_load_23' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_14 : Operation 189 [2/2] (3.25ns)   --->   "%C_load_24 = load i32* %C_addr_24, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 189 'load' 'C_load_24' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_14 : Operation 190 [2/2] (3.25ns)   --->   "%C_load_25 = load i32* %C_addr_25, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 190 'load' 'C_load_25' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 15 <SV = 14> <Delay = 3.25>
+ST_15 : Operation 191 [1/2] (3.25ns)   --->   "%C_load_24 = load i32* %C_addr_24, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 191 'load' 'C_load_24' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_15 : Operation 192 [1/2] (3.25ns)   --->   "%C_load_25 = load i32* %C_addr_25, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 192 'load' 'C_load_25' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_15 : Operation 193 [2/2] (3.25ns)   --->   "%C_load_26 = load i32* %C_addr_26, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 193 'load' 'C_load_26' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_15 : Operation 194 [2/2] (3.25ns)   --->   "%C_load_27 = load i32* %C_addr_27, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 194 'load' 'C_load_27' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 16 <SV = 15> <Delay = 3.25>
+ST_16 : Operation 195 [1/2] (3.25ns)   --->   "%C_load_26 = load i32* %C_addr_26, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 195 'load' 'C_load_26' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_16 : Operation 196 [1/2] (3.25ns)   --->   "%C_load_27 = load i32* %C_addr_27, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 196 'load' 'C_load_27' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_16 : Operation 197 [2/2] (3.25ns)   --->   "%C_load_28 = load i32* %C_addr_28, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 197 'load' 'C_load_28' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_16 : Operation 198 [2/2] (3.25ns)   --->   "%C_load_29 = load i32* %C_addr_29, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 198 'load' 'C_load_29' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 17 <SV = 16> <Delay = 3.25>
+ST_17 : Operation 199 [1/2] (3.25ns)   --->   "%C_load_28 = load i32* %C_addr_28, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 199 'load' 'C_load_28' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_17 : Operation 200 [1/2] (3.25ns)   --->   "%C_load_29 = load i32* %C_addr_29, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 200 'load' 'C_load_29' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_17 : Operation 201 [2/2] (3.25ns)   --->   "%C_load_30 = load i32* %C_addr_30, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 201 'load' 'C_load_30' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_17 : Operation 202 [2/2] (3.25ns)   --->   "%C_load_31 = load i32* %C_addr_31, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 202 'load' 'C_load_31' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 18 <SV = 17> <Delay = 3.25>
+ST_18 : Operation 203 [1/2] (3.25ns)   --->   "%C_load_30 = load i32* %C_addr_30, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 203 'load' 'C_load_30' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_18 : Operation 204 [1/2] (3.25ns)   --->   "%C_load_31 = load i32* %C_addr_31, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 204 'load' 'C_load_31' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_18 : Operation 205 [2/2] (3.25ns)   --->   "%C_load_32 = load i32* %C_addr_32, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 205 'load' 'C_load_32' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_18 : Operation 206 [2/2] (3.25ns)   --->   "%C_load_33 = load i32* %C_addr_33, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 206 'load' 'C_load_33' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 19 <SV = 18> <Delay = 3.25>
+ST_19 : Operation 207 [1/2] (3.25ns)   --->   "%C_load_32 = load i32* %C_addr_32, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 207 'load' 'C_load_32' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_19 : Operation 208 [1/2] (3.25ns)   --->   "%C_load_33 = load i32* %C_addr_33, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 208 'load' 'C_load_33' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_19 : Operation 209 [2/2] (3.25ns)   --->   "%C_load_34 = load i32* %C_addr_34, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 209 'load' 'C_load_34' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_19 : Operation 210 [2/2] (3.25ns)   --->   "%C_load_35 = load i32* %C_addr_35, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 210 'load' 'C_load_35' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 20 <SV = 19> <Delay = 3.25>
+ST_20 : Operation 211 [1/2] (3.25ns)   --->   "%C_load_34 = load i32* %C_addr_34, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 211 'load' 'C_load_34' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_20 : Operation 212 [1/2] (3.25ns)   --->   "%C_load_35 = load i32* %C_addr_35, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 212 'load' 'C_load_35' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_20 : Operation 213 [2/2] (3.25ns)   --->   "%C_load_36 = load i32* %C_addr_36, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 213 'load' 'C_load_36' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_20 : Operation 214 [2/2] (3.25ns)   --->   "%C_load_37 = load i32* %C_addr_37, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 214 'load' 'C_load_37' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 21 <SV = 20> <Delay = 3.25>
+ST_21 : Operation 215 [1/2] (3.25ns)   --->   "%C_load_36 = load i32* %C_addr_36, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 215 'load' 'C_load_36' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_21 : Operation 216 [1/2] (3.25ns)   --->   "%C_load_37 = load i32* %C_addr_37, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 216 'load' 'C_load_37' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_21 : Operation 217 [2/2] (3.25ns)   --->   "%C_load_38 = load i32* %C_addr_38, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 217 'load' 'C_load_38' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_21 : Operation 218 [2/2] (3.25ns)   --->   "%C_load_39 = load i32* %C_addr_39, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 218 'load' 'C_load_39' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 22 <SV = 21> <Delay = 3.25>
+ST_22 : Operation 219 [1/2] (3.25ns)   --->   "%C_load_38 = load i32* %C_addr_38, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 219 'load' 'C_load_38' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_22 : Operation 220 [1/2] (3.25ns)   --->   "%C_load_39 = load i32* %C_addr_39, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 220 'load' 'C_load_39' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_22 : Operation 221 [2/2] (3.25ns)   --->   "%C_load_40 = load i32* %C_addr_40, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 221 'load' 'C_load_40' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_22 : Operation 222 [2/2] (3.25ns)   --->   "%C_load_41 = load i32* %C_addr_41, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 222 'load' 'C_load_41' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 23 <SV = 22> <Delay = 3.25>
+ST_23 : Operation 223 [1/2] (3.25ns)   --->   "%C_load_40 = load i32* %C_addr_40, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 223 'load' 'C_load_40' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_23 : Operation 224 [1/2] (3.25ns)   --->   "%C_load_41 = load i32* %C_addr_41, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 224 'load' 'C_load_41' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_23 : Operation 225 [2/2] (3.25ns)   --->   "%C_load_42 = load i32* %C_addr_42, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 225 'load' 'C_load_42' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_23 : Operation 226 [2/2] (3.25ns)   --->   "%C_load_43 = load i32* %C_addr_43, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 226 'load' 'C_load_43' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 24 <SV = 23> <Delay = 3.25>
+ST_24 : Operation 227 [1/2] (3.25ns)   --->   "%C_load_42 = load i32* %C_addr_42, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 227 'load' 'C_load_42' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_24 : Operation 228 [1/2] (3.25ns)   --->   "%C_load_43 = load i32* %C_addr_43, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 228 'load' 'C_load_43' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_24 : Operation 229 [2/2] (3.25ns)   --->   "%C_load_44 = load i32* %C_addr_44, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 229 'load' 'C_load_44' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_24 : Operation 230 [2/2] (3.25ns)   --->   "%C_load_45 = load i32* %C_addr_45, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 230 'load' 'C_load_45' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 25 <SV = 24> <Delay = 3.25>
+ST_25 : Operation 231 [1/2] (3.25ns)   --->   "%C_load_44 = load i32* %C_addr_44, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 231 'load' 'C_load_44' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_25 : Operation 232 [1/2] (3.25ns)   --->   "%C_load_45 = load i32* %C_addr_45, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 232 'load' 'C_load_45' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_25 : Operation 233 [2/2] (3.25ns)   --->   "%C_load_46 = load i32* %C_addr_46, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 233 'load' 'C_load_46' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_25 : Operation 234 [2/2] (3.25ns)   --->   "%C_load_47 = load i32* %C_addr_47, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 234 'load' 'C_load_47' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 26 <SV = 25> <Delay = 3.25>
+ST_26 : Operation 235 [1/2] (3.25ns)   --->   "%C_load_46 = load i32* %C_addr_46, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 235 'load' 'C_load_46' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_26 : Operation 236 [1/2] (3.25ns)   --->   "%C_load_47 = load i32* %C_addr_47, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 236 'load' 'C_load_47' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_26 : Operation 237 [2/2] (3.25ns)   --->   "%C_load_48 = load i32* %C_addr_48, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 237 'load' 'C_load_48' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_26 : Operation 238 [2/2] (3.25ns)   --->   "%C_load_49 = load i32* %C_addr_49, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 238 'load' 'C_load_49' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 27 <SV = 26> <Delay = 3.25>
+ST_27 : Operation 239 [1/2] (3.25ns)   --->   "%C_load_48 = load i32* %C_addr_48, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 239 'load' 'C_load_48' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_27 : Operation 240 [1/2] (3.25ns)   --->   "%C_load_49 = load i32* %C_addr_49, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 240 'load' 'C_load_49' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_27 : Operation 241 [2/2] (3.25ns)   --->   "%C_load_50 = load i32* %C_addr_50, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 241 'load' 'C_load_50' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_27 : Operation 242 [2/2] (3.25ns)   --->   "%C_load_51 = load i32* %C_addr_51, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 242 'load' 'C_load_51' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 28 <SV = 27> <Delay = 3.25>
+ST_28 : Operation 243 [1/2] (3.25ns)   --->   "%C_load_50 = load i32* %C_addr_50, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 243 'load' 'C_load_50' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_28 : Operation 244 [1/2] (3.25ns)   --->   "%C_load_51 = load i32* %C_addr_51, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 244 'load' 'C_load_51' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_28 : Operation 245 [2/2] (3.25ns)   --->   "%C_load_52 = load i32* %C_addr_52, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 245 'load' 'C_load_52' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_28 : Operation 246 [2/2] (3.25ns)   --->   "%C_load_53 = load i32* %C_addr_53, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 246 'load' 'C_load_53' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 29 <SV = 28> <Delay = 3.25>
+ST_29 : Operation 247 [1/2] (3.25ns)   --->   "%C_load_52 = load i32* %C_addr_52, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 247 'load' 'C_load_52' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_29 : Operation 248 [1/2] (3.25ns)   --->   "%C_load_53 = load i32* %C_addr_53, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 248 'load' 'C_load_53' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_29 : Operation 249 [2/2] (3.25ns)   --->   "%C_load_54 = load i32* %C_addr_54, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 249 'load' 'C_load_54' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_29 : Operation 250 [2/2] (3.25ns)   --->   "%C_load_55 = load i32* %C_addr_55, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 250 'load' 'C_load_55' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 30 <SV = 29> <Delay = 3.25>
+ST_30 : Operation 251 [1/2] (3.25ns)   --->   "%C_load_54 = load i32* %C_addr_54, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 251 'load' 'C_load_54' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_30 : Operation 252 [1/2] (3.25ns)   --->   "%C_load_55 = load i32* %C_addr_55, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 252 'load' 'C_load_55' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_30 : Operation 253 [2/2] (3.25ns)   --->   "%C_load_56 = load i32* %C_addr_56, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 253 'load' 'C_load_56' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_30 : Operation 254 [2/2] (3.25ns)   --->   "%C_load_57 = load i32* %C_addr_57, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 254 'load' 'C_load_57' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 31 <SV = 30> <Delay = 4.37>
+ST_31 : Operation 255 [1/1] (0.00ns)   --->   "%tmp = zext i4 %k to i64" [Mul/modified_algo(s2).c:16]   --->   Operation 255 'zext' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 256 [1/1] (0.00ns)   --->   "%A_addr = getelementptr [64 x i32]* %A, i64 0, i64 %tmp" [Mul/modified_algo(s2).c:16]   --->   Operation 256 'getelementptr' 'A_addr' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 257 [1/1] (1.12ns)   --->   "%tmp_1 = xor i4 %k, -8" [Mul/modified_algo(s2).c:16]   --->   Operation 257 'xor' 'tmp_1' <Predicate = true> <Delay = 1.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 258 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i4 %tmp_1 to i64" [Mul/modified_algo(s2).c:16]   --->   Operation 258 'zext' 'tmp_1_cast' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 259 [1/1] (0.00ns)   --->   "%A_addr_1 = getelementptr [64 x i32]* %A, i64 0, i64 %tmp_1_cast" [Mul/modified_algo(s2).c:16]   --->   Operation 259 'getelementptr' 'A_addr_1' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 260 [1/1] (0.00ns)   --->   "%tmp_s = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %k, i3 0)" [Mul/modified_algo(s2).c:7]   --->   Operation 260 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 261 [1/1] (0.00ns)   --->   "%tmp_3 = zext i7 %tmp_s to i64" [Mul/modified_algo(s2).c:16]   --->   Operation 261 'zext' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 262 [1/1] (0.00ns)   --->   "%B_addr = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_3" [Mul/modified_algo(s2).c:16]   --->   Operation 262 'getelementptr' 'B_addr' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 263 [1/1] (0.00ns)   --->   "%tmp_9 = or i7 %tmp_s, 1" [Mul/modified_algo(s2).c:7]   --->   Operation 263 'or' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 264 [1/1] (0.00ns)   --->   "%tmp_10 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_9)" [Mul/modified_algo(s2).c:16]   --->   Operation 264 'bitconcatenate' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 265 [1/1] (0.00ns)   --->   "%B_addr_1 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_10" [Mul/modified_algo(s2).c:16]   --->   Operation 265 'getelementptr' 'B_addr_1' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 266 [2/2] (3.25ns)   --->   "%A_load = load i32* %A_addr, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 266 'load' 'A_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_31 : Operation 267 [2/2] (3.25ns)   --->   "%B_load = load i32* %B_addr, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 267 'load' 'B_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_31 : Operation 268 [2/2] (3.25ns)   --->   "%B_load_1 = load i32* %B_addr_1, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 268 'load' 'B_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_31 : Operation 269 [2/2] (3.25ns)   --->   "%A_load_1 = load i32* %A_addr_1, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 269 'load' 'A_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_31 : Operation 270 [1/2] (3.25ns)   --->   "%C_load_56 = load i32* %C_addr_56, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 270 'load' 'C_load_56' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_31 : Operation 271 [1/2] (3.25ns)   --->   "%C_load_57 = load i32* %C_addr_57, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 271 'load' 'C_load_57' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_31 : Operation 272 [2/2] (3.25ns)   --->   "%C_load_58 = load i32* %C_addr_58, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 272 'load' 'C_load_58' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_31 : Operation 273 [2/2] (3.25ns)   --->   "%C_load_59 = load i32* %C_addr_59, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 273 'load' 'C_load_59' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 32 <SV = 31> <Delay = 3.25>
+ST_32 : Operation 274 [1/1] (0.00ns)   --->   "%tmp_2 = call i64 @_ssdm_op_BitConcatenate.i64.i60.i4(i60 1, i4 %k)" [Mul/modified_algo(s2).c:16]   --->   Operation 274 'bitconcatenate' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 275 [1/1] (0.00ns)   --->   "%A_addr_2 = getelementptr [64 x i32]* %A, i64 0, i64 %tmp_2" [Mul/modified_algo(s2).c:16]   --->   Operation 275 'getelementptr' 'A_addr_2' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 276 [1/1] (0.00ns)   --->   "%tmp_3_cast4 = sext i4 %tmp_1 to i5" [Mul/modified_algo(s2).c:16]   --->   Operation 276 'sext' 'tmp_3_cast4' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 277 [1/1] (0.00ns)   --->   "%tmp_3_cast = zext i5 %tmp_3_cast4 to i64" [Mul/modified_algo(s2).c:16]   --->   Operation 277 'zext' 'tmp_3_cast' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 278 [1/1] (0.00ns)   --->   "%A_addr_3 = getelementptr [64 x i32]* %A, i64 0, i64 %tmp_3_cast" [Mul/modified_algo(s2).c:16]   --->   Operation 278 'getelementptr' 'A_addr_3' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 279 [1/1] (0.00ns)   --->   "%tmp_11 = or i7 %tmp_s, 2" [Mul/modified_algo(s2).c:7]   --->   Operation 279 'or' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 280 [1/1] (0.00ns)   --->   "%tmp_12 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_11)" [Mul/modified_algo(s2).c:16]   --->   Operation 280 'bitconcatenate' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 281 [1/1] (0.00ns)   --->   "%B_addr_2 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_12" [Mul/modified_algo(s2).c:16]   --->   Operation 281 'getelementptr' 'B_addr_2' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 282 [1/1] (0.00ns)   --->   "%tmp_13 = or i7 %tmp_s, 3" [Mul/modified_algo(s2).c:7]   --->   Operation 282 'or' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 283 [1/1] (0.00ns)   --->   "%tmp_14 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_13)" [Mul/modified_algo(s2).c:16]   --->   Operation 283 'bitconcatenate' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 284 [1/1] (0.00ns)   --->   "%B_addr_3 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_14" [Mul/modified_algo(s2).c:16]   --->   Operation 284 'getelementptr' 'B_addr_3' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 285 [1/2] (3.25ns)   --->   "%A_load = load i32* %A_addr, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 285 'load' 'A_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 286 [1/2] (3.25ns)   --->   "%B_load = load i32* %B_addr, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 286 'load' 'B_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 287 [1/2] (3.25ns)   --->   "%B_load_1 = load i32* %B_addr_1, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 287 'load' 'B_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 288 [2/2] (3.25ns)   --->   "%B_load_2 = load i32* %B_addr_2, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 288 'load' 'B_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 289 [2/2] (3.25ns)   --->   "%B_load_3 = load i32* %B_addr_3, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 289 'load' 'B_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 290 [1/2] (3.25ns)   --->   "%A_load_1 = load i32* %A_addr_1, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 290 'load' 'A_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 291 [2/2] (3.25ns)   --->   "%A_load_2 = load i32* %A_addr_2, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 291 'load' 'A_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 292 [2/2] (3.25ns)   --->   "%A_load_3 = load i32* %A_addr_3, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 292 'load' 'A_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 293 [1/2] (3.25ns)   --->   "%C_load_58 = load i32* %C_addr_58, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 293 'load' 'C_load_58' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 294 [1/2] (3.25ns)   --->   "%C_load_59 = load i32* %C_addr_59, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 294 'load' 'C_load_59' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 295 [2/2] (3.25ns)   --->   "%C_load_60 = load i32* %C_addr_60, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 295 'load' 'C_load_60' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_32 : Operation 296 [2/2] (3.25ns)   --->   "%C_load_61 = load i32* %C_addr_61, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 296 'load' 'C_load_61' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 33 <SV = 32> <Delay = 8.47>
+ST_33 : Operation 297 [1/1] (0.00ns)   --->   "%tmp_cast2 = zext i4 %k to i6" [Mul/modified_algo(s2).c:16]   --->   Operation 297 'zext' 'tmp_cast2' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 298 [1/1] (0.00ns)   --->   "%tmp_4 = call i64 @_ssdm_op_BitConcatenate.i64.i60.i4(i60 2, i4 %k)" [Mul/modified_algo(s2).c:16]   --->   Operation 298 'bitconcatenate' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 299 [1/1] (0.00ns)   --->   "%A_addr_4 = getelementptr [64 x i32]* %A, i64 0, i64 %tmp_4" [Mul/modified_algo(s2).c:16]   --->   Operation 299 'getelementptr' 'A_addr_4' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 300 [1/1] (1.94ns)   --->   "%tmp_7 = add i6 %tmp_cast2, -24" [Mul/modified_algo(s2).c:16]   --->   Operation 300 'add' 'tmp_7' <Predicate = true> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 301 [1/1] (0.00ns)   --->   "%tmp_7_cast = zext i6 %tmp_7 to i64" [Mul/modified_algo(s2).c:16]   --->   Operation 301 'zext' 'tmp_7_cast' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 302 [1/1] (0.00ns)   --->   "%A_addr_5 = getelementptr [64 x i32]* %A, i64 0, i64 %tmp_7_cast" [Mul/modified_algo(s2).c:16]   --->   Operation 302 'getelementptr' 'A_addr_5' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 303 [1/1] (0.00ns)   --->   "%tmp_15 = or i7 %tmp_s, 4" [Mul/modified_algo(s2).c:7]   --->   Operation 303 'or' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 304 [1/1] (0.00ns)   --->   "%tmp_16 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_15)" [Mul/modified_algo(s2).c:16]   --->   Operation 304 'bitconcatenate' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 305 [1/1] (0.00ns)   --->   "%B_addr_4 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_16" [Mul/modified_algo(s2).c:16]   --->   Operation 305 'getelementptr' 'B_addr_4' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 306 [1/1] (0.00ns)   --->   "%tmp_17 = or i7 %tmp_s, 5" [Mul/modified_algo(s2).c:7]   --->   Operation 306 'or' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 307 [1/1] (0.00ns)   --->   "%tmp_18 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_17)" [Mul/modified_algo(s2).c:16]   --->   Operation 307 'bitconcatenate' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 308 [1/1] (0.00ns)   --->   "%B_addr_5 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_18" [Mul/modified_algo(s2).c:16]   --->   Operation 308 'getelementptr' 'B_addr_5' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 309 [1/1] (8.47ns)   --->   "%tmp_5 = mul nsw i32 %A_load, %B_load" [Mul/modified_algo(s2).c:16]   --->   Operation 309 'mul' 'tmp_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 310 [1/1] (8.47ns)   --->   "%tmp_5_0_1 = mul nsw i32 %A_load, %B_load_1" [Mul/modified_algo(s2).c:16]   --->   Operation 310 'mul' 'tmp_5_0_1' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 311 [1/2] (3.25ns)   --->   "%B_load_2 = load i32* %B_addr_2, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 311 'load' 'B_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 312 [1/2] (3.25ns)   --->   "%B_load_3 = load i32* %B_addr_3, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 312 'load' 'B_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 313 [2/2] (3.25ns)   --->   "%B_load_4 = load i32* %B_addr_4, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 313 'load' 'B_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 314 [2/2] (3.25ns)   --->   "%B_load_5 = load i32* %B_addr_5, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 314 'load' 'B_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 315 [1/2] (3.25ns)   --->   "%A_load_2 = load i32* %A_addr_2, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 315 'load' 'A_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 316 [1/2] (3.25ns)   --->   "%A_load_3 = load i32* %A_addr_3, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 316 'load' 'A_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 317 [2/2] (3.25ns)   --->   "%A_load_4 = load i32* %A_addr_4, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 317 'load' 'A_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 318 [2/2] (3.25ns)   --->   "%A_load_5 = load i32* %A_addr_5, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 318 'load' 'A_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 319 [1/2] (3.25ns)   --->   "%C_load_60 = load i32* %C_addr_60, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 319 'load' 'C_load_60' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 320 [1/2] (3.25ns)   --->   "%C_load_61 = load i32* %C_addr_61, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 320 'load' 'C_load_61' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 321 [2/2] (3.25ns)   --->   "%C_load_62 = load i32* %C_addr_62, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 321 'load' 'C_load_62' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_33 : Operation 322 [2/2] (3.25ns)   --->   "%C_load_63 = load i32* %C_addr_63, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 322 'load' 'C_load_63' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 34 <SV = 33> <Delay = 8.47>
+ST_34 : Operation 323 [1/1] (0.00ns)   --->   "%tmp_8 = call i64 @_ssdm_op_BitConcatenate.i64.i60.i4(i60 3, i4 %k)" [Mul/modified_algo(s2).c:16]   --->   Operation 323 'bitconcatenate' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 324 [1/1] (0.00ns)   --->   "%A_addr_6 = getelementptr [64 x i32]* %A, i64 0, i64 %tmp_8" [Mul/modified_algo(s2).c:16]   --->   Operation 324 'getelementptr' 'A_addr_6' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 325 [1/1] (0.00ns)   --->   "%tmp_9_cast3 = sext i4 %tmp_1 to i6" [Mul/modified_algo(s2).c:16]   --->   Operation 325 'sext' 'tmp_9_cast3' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 326 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i6 %tmp_9_cast3 to i64" [Mul/modified_algo(s2).c:16]   --->   Operation 326 'zext' 'tmp_9_cast' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 327 [1/1] (0.00ns)   --->   "%A_addr_7 = getelementptr [64 x i32]* %A, i64 0, i64 %tmp_9_cast" [Mul/modified_algo(s2).c:16]   --->   Operation 327 'getelementptr' 'A_addr_7' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 328 [1/1] (0.00ns)   --->   "%tmp_19 = or i7 %tmp_s, 6" [Mul/modified_algo(s2).c:7]   --->   Operation 328 'or' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 329 [1/1] (0.00ns)   --->   "%tmp_20 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_19)" [Mul/modified_algo(s2).c:16]   --->   Operation 329 'bitconcatenate' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 330 [1/1] (0.00ns)   --->   "%B_addr_6 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_20" [Mul/modified_algo(s2).c:16]   --->   Operation 330 'getelementptr' 'B_addr_6' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 331 [1/1] (0.00ns)   --->   "%tmp_21 = or i7 %tmp_s, 7" [Mul/modified_algo(s2).c:7]   --->   Operation 331 'or' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 332 [1/1] (0.00ns)   --->   "%tmp_22 = call i64 @_ssdm_op_BitConcatenate.i64.i57.i7(i57 0, i7 %tmp_21)" [Mul/modified_algo(s2).c:16]   --->   Operation 332 'bitconcatenate' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 333 [1/1] (0.00ns)   --->   "%B_addr_7 = getelementptr [64 x i32]* %B, i64 0, i64 %tmp_22" [Mul/modified_algo(s2).c:16]   --->   Operation 333 'getelementptr' 'B_addr_7' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 334 [1/1] (2.70ns)   --->   "%tmp_6 = add nsw i32 %C_load, %tmp_5" [Mul/modified_algo(s2).c:16]   --->   Operation 334 'add' 'tmp_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 335 [1/1] (3.25ns)   --->   "store i32 %tmp_6, i32* %C_addr, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 335 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 336 [1/1] (2.70ns)   --->   "%tmp_6_0_1 = add nsw i32 %C_load_1, %tmp_5_0_1" [Mul/modified_algo(s2).c:16]   --->   Operation 336 'add' 'tmp_6_0_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 337 [1/1] (3.25ns)   --->   "store i32 %tmp_6_0_1, i32* %C_addr_1, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 337 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 338 [1/1] (8.47ns)   --->   "%tmp_5_0_2 = mul nsw i32 %A_load, %B_load_2" [Mul/modified_algo(s2).c:16]   --->   Operation 338 'mul' 'tmp_5_0_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 339 [1/1] (8.47ns)   --->   "%tmp_5_0_3 = mul nsw i32 %A_load, %B_load_3" [Mul/modified_algo(s2).c:16]   --->   Operation 339 'mul' 'tmp_5_0_3' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 340 [1/2] (3.25ns)   --->   "%B_load_4 = load i32* %B_addr_4, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 340 'load' 'B_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 341 [1/2] (3.25ns)   --->   "%B_load_5 = load i32* %B_addr_5, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 341 'load' 'B_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 342 [2/2] (3.25ns)   --->   "%B_load_6 = load i32* %B_addr_6, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 342 'load' 'B_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 343 [2/2] (3.25ns)   --->   "%B_load_7 = load i32* %B_addr_7, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 343 'load' 'B_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 344 [1/2] (3.25ns)   --->   "%A_load_4 = load i32* %A_addr_4, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 344 'load' 'A_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 345 [1/2] (3.25ns)   --->   "%A_load_5 = load i32* %A_addr_5, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 345 'load' 'A_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 346 [2/2] (3.25ns)   --->   "%A_load_6 = load i32* %A_addr_6, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 346 'load' 'A_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 347 [2/2] (3.25ns)   --->   "%A_load_7 = load i32* %A_addr_7, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 347 'load' 'A_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 348 [1/2] (3.25ns)   --->   "%C_load_62 = load i32* %C_addr_62, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 348 'load' 'C_load_62' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_34 : Operation 349 [1/2] (3.25ns)   --->   "%C_load_63 = load i32* %C_addr_63, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 349 'load' 'C_load_63' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 35 <SV = 34> <Delay = 8.47>
+ST_35 : Operation 350 [1/1] (2.70ns)   --->   "%tmp_6_0_2 = add nsw i32 %C_load_2, %tmp_5_0_2" [Mul/modified_algo(s2).c:16]   --->   Operation 350 'add' 'tmp_6_0_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 351 [1/1] (3.25ns)   --->   "store i32 %tmp_6_0_2, i32* %C_addr_2, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 351 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_35 : Operation 352 [1/1] (2.70ns)   --->   "%tmp_6_0_3 = add nsw i32 %C_load_3, %tmp_5_0_3" [Mul/modified_algo(s2).c:16]   --->   Operation 352 'add' 'tmp_6_0_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 353 [1/1] (3.25ns)   --->   "store i32 %tmp_6_0_3, i32* %C_addr_3, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 353 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_35 : Operation 354 [1/1] (8.47ns)   --->   "%tmp_5_0_4 = mul nsw i32 %A_load, %B_load_4" [Mul/modified_algo(s2).c:16]   --->   Operation 354 'mul' 'tmp_5_0_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 355 [1/1] (8.47ns)   --->   "%tmp_5_0_5 = mul nsw i32 %A_load, %B_load_5" [Mul/modified_algo(s2).c:16]   --->   Operation 355 'mul' 'tmp_5_0_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 356 [1/2] (3.25ns)   --->   "%B_load_6 = load i32* %B_addr_6, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 356 'load' 'B_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_35 : Operation 357 [1/2] (3.25ns)   --->   "%B_load_7 = load i32* %B_addr_7, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 357 'load' 'B_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_35 : Operation 358 [1/2] (3.25ns)   --->   "%A_load_6 = load i32* %A_addr_6, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 358 'load' 'A_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_35 : Operation 359 [1/2] (3.25ns)   --->   "%A_load_7 = load i32* %A_addr_7, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 359 'load' 'A_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 36 <SV = 35> <Delay = 8.47>
+ST_36 : Operation 360 [1/1] (2.70ns)   --->   "%tmp_6_0_4 = add nsw i32 %C_load_4, %tmp_5_0_4" [Mul/modified_algo(s2).c:16]   --->   Operation 360 'add' 'tmp_6_0_4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 361 [1/1] (3.25ns)   --->   "store i32 %tmp_6_0_4, i32* %C_addr_4, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 361 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_36 : Operation 362 [1/1] (2.70ns)   --->   "%tmp_6_0_5 = add nsw i32 %C_load_5, %tmp_5_0_5" [Mul/modified_algo(s2).c:16]   --->   Operation 362 'add' 'tmp_6_0_5' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 363 [1/1] (3.25ns)   --->   "store i32 %tmp_6_0_5, i32* %C_addr_5, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 363 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_36 : Operation 364 [1/1] (8.47ns)   --->   "%tmp_5_0_6 = mul nsw i32 %A_load, %B_load_6" [Mul/modified_algo(s2).c:16]   --->   Operation 364 'mul' 'tmp_5_0_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 365 [1/1] (8.47ns)   --->   "%tmp_5_0_7 = mul nsw i32 %A_load, %B_load_7" [Mul/modified_algo(s2).c:16]   --->   Operation 365 'mul' 'tmp_5_0_7' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 366 [1/1] (8.47ns)   --->   "%tmp_5_1 = mul nsw i32 %A_load_1, %B_load" [Mul/modified_algo(s2).c:16]   --->   Operation 366 'mul' 'tmp_5_1' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 367 [1/1] (8.47ns)   --->   "%tmp_5_1_1 = mul nsw i32 %A_load_1, %B_load_1" [Mul/modified_algo(s2).c:16]   --->   Operation 367 'mul' 'tmp_5_1_1' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 368 [1/1] (8.47ns)   --->   "%tmp_5_1_2 = mul nsw i32 %A_load_1, %B_load_2" [Mul/modified_algo(s2).c:16]   --->   Operation 368 'mul' 'tmp_5_1_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 369 [1/1] (8.47ns)   --->   "%tmp_5_1_3 = mul nsw i32 %A_load_1, %B_load_3" [Mul/modified_algo(s2).c:16]   --->   Operation 369 'mul' 'tmp_5_1_3' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 370 [1/1] (8.47ns)   --->   "%tmp_5_1_4 = mul nsw i32 %A_load_1, %B_load_4" [Mul/modified_algo(s2).c:16]   --->   Operation 370 'mul' 'tmp_5_1_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 371 [1/1] (8.47ns)   --->   "%tmp_5_1_5 = mul nsw i32 %A_load_1, %B_load_5" [Mul/modified_algo(s2).c:16]   --->   Operation 371 'mul' 'tmp_5_1_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 372 [1/1] (8.47ns)   --->   "%tmp_5_1_6 = mul nsw i32 %A_load_1, %B_load_6" [Mul/modified_algo(s2).c:16]   --->   Operation 372 'mul' 'tmp_5_1_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 373 [1/1] (8.47ns)   --->   "%tmp_5_1_7 = mul nsw i32 %A_load_1, %B_load_7" [Mul/modified_algo(s2).c:16]   --->   Operation 373 'mul' 'tmp_5_1_7' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 374 [1/1] (8.47ns)   --->   "%tmp_5_2 = mul nsw i32 %A_load_2, %B_load" [Mul/modified_algo(s2).c:16]   --->   Operation 374 'mul' 'tmp_5_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 375 [1/1] (8.47ns)   --->   "%tmp_5_2_1 = mul nsw i32 %A_load_2, %B_load_1" [Mul/modified_algo(s2).c:16]   --->   Operation 375 'mul' 'tmp_5_2_1' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 376 [1/1] (8.47ns)   --->   "%tmp_5_2_2 = mul nsw i32 %A_load_2, %B_load_2" [Mul/modified_algo(s2).c:16]   --->   Operation 376 'mul' 'tmp_5_2_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 377 [1/1] (8.47ns)   --->   "%tmp_5_2_3 = mul nsw i32 %A_load_2, %B_load_3" [Mul/modified_algo(s2).c:16]   --->   Operation 377 'mul' 'tmp_5_2_3' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 378 [1/1] (8.47ns)   --->   "%tmp_5_2_4 = mul nsw i32 %A_load_2, %B_load_4" [Mul/modified_algo(s2).c:16]   --->   Operation 378 'mul' 'tmp_5_2_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 379 [1/1] (8.47ns)   --->   "%tmp_5_2_5 = mul nsw i32 %A_load_2, %B_load_5" [Mul/modified_algo(s2).c:16]   --->   Operation 379 'mul' 'tmp_5_2_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 380 [1/1] (8.47ns)   --->   "%tmp_5_2_6 = mul nsw i32 %A_load_2, %B_load_6" [Mul/modified_algo(s2).c:16]   --->   Operation 380 'mul' 'tmp_5_2_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 381 [1/1] (8.47ns)   --->   "%tmp_5_2_7 = mul nsw i32 %A_load_2, %B_load_7" [Mul/modified_algo(s2).c:16]   --->   Operation 381 'mul' 'tmp_5_2_7' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 382 [1/1] (8.47ns)   --->   "%tmp_5_3 = mul nsw i32 %A_load_3, %B_load" [Mul/modified_algo(s2).c:16]   --->   Operation 382 'mul' 'tmp_5_3' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 383 [1/1] (8.47ns)   --->   "%tmp_5_3_1 = mul nsw i32 %A_load_3, %B_load_1" [Mul/modified_algo(s2).c:16]   --->   Operation 383 'mul' 'tmp_5_3_1' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 384 [1/1] (8.47ns)   --->   "%tmp_5_3_2 = mul nsw i32 %A_load_3, %B_load_2" [Mul/modified_algo(s2).c:16]   --->   Operation 384 'mul' 'tmp_5_3_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 385 [1/1] (8.47ns)   --->   "%tmp_5_3_3 = mul nsw i32 %A_load_3, %B_load_3" [Mul/modified_algo(s2).c:16]   --->   Operation 385 'mul' 'tmp_5_3_3' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 386 [1/1] (8.47ns)   --->   "%tmp_5_3_4 = mul nsw i32 %A_load_3, %B_load_4" [Mul/modified_algo(s2).c:16]   --->   Operation 386 'mul' 'tmp_5_3_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 387 [1/1] (8.47ns)   --->   "%tmp_5_3_5 = mul nsw i32 %A_load_3, %B_load_5" [Mul/modified_algo(s2).c:16]   --->   Operation 387 'mul' 'tmp_5_3_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 388 [1/1] (8.47ns)   --->   "%tmp_5_3_6 = mul nsw i32 %A_load_3, %B_load_6" [Mul/modified_algo(s2).c:16]   --->   Operation 388 'mul' 'tmp_5_3_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 389 [1/1] (8.47ns)   --->   "%tmp_5_3_7 = mul nsw i32 %A_load_3, %B_load_7" [Mul/modified_algo(s2).c:16]   --->   Operation 389 'mul' 'tmp_5_3_7' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 390 [1/1] (8.47ns)   --->   "%tmp_5_4 = mul nsw i32 %A_load_4, %B_load" [Mul/modified_algo(s2).c:16]   --->   Operation 390 'mul' 'tmp_5_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 391 [1/1] (8.47ns)   --->   "%tmp_5_4_1 = mul nsw i32 %A_load_4, %B_load_1" [Mul/modified_algo(s2).c:16]   --->   Operation 391 'mul' 'tmp_5_4_1' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 392 [1/1] (8.47ns)   --->   "%tmp_5_4_2 = mul nsw i32 %A_load_4, %B_load_2" [Mul/modified_algo(s2).c:16]   --->   Operation 392 'mul' 'tmp_5_4_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 393 [1/1] (8.47ns)   --->   "%tmp_5_4_3 = mul nsw i32 %A_load_4, %B_load_3" [Mul/modified_algo(s2).c:16]   --->   Operation 393 'mul' 'tmp_5_4_3' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 394 [1/1] (8.47ns)   --->   "%tmp_5_4_4 = mul nsw i32 %A_load_4, %B_load_4" [Mul/modified_algo(s2).c:16]   --->   Operation 394 'mul' 'tmp_5_4_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 395 [1/1] (8.47ns)   --->   "%tmp_5_4_5 = mul nsw i32 %A_load_4, %B_load_5" [Mul/modified_algo(s2).c:16]   --->   Operation 395 'mul' 'tmp_5_4_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 396 [1/1] (8.47ns)   --->   "%tmp_5_4_6 = mul nsw i32 %A_load_4, %B_load_6" [Mul/modified_algo(s2).c:16]   --->   Operation 396 'mul' 'tmp_5_4_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 397 [1/1] (8.47ns)   --->   "%tmp_5_4_7 = mul nsw i32 %A_load_4, %B_load_7" [Mul/modified_algo(s2).c:16]   --->   Operation 397 'mul' 'tmp_5_4_7' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 398 [1/1] (8.47ns)   --->   "%tmp_5_5 = mul nsw i32 %A_load_5, %B_load" [Mul/modified_algo(s2).c:16]   --->   Operation 398 'mul' 'tmp_5_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 399 [1/1] (8.47ns)   --->   "%tmp_5_5_1 = mul nsw i32 %A_load_5, %B_load_1" [Mul/modified_algo(s2).c:16]   --->   Operation 399 'mul' 'tmp_5_5_1' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 400 [1/1] (8.47ns)   --->   "%tmp_5_5_2 = mul nsw i32 %A_load_5, %B_load_2" [Mul/modified_algo(s2).c:16]   --->   Operation 400 'mul' 'tmp_5_5_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 401 [1/1] (8.47ns)   --->   "%tmp_5_5_3 = mul nsw i32 %A_load_5, %B_load_3" [Mul/modified_algo(s2).c:16]   --->   Operation 401 'mul' 'tmp_5_5_3' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 402 [1/1] (8.47ns)   --->   "%tmp_5_5_4 = mul nsw i32 %A_load_5, %B_load_4" [Mul/modified_algo(s2).c:16]   --->   Operation 402 'mul' 'tmp_5_5_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 403 [1/1] (8.47ns)   --->   "%tmp_5_5_5 = mul nsw i32 %A_load_5, %B_load_5" [Mul/modified_algo(s2).c:16]   --->   Operation 403 'mul' 'tmp_5_5_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 404 [1/1] (8.47ns)   --->   "%tmp_5_5_6 = mul nsw i32 %A_load_5, %B_load_6" [Mul/modified_algo(s2).c:16]   --->   Operation 404 'mul' 'tmp_5_5_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 405 [1/1] (8.47ns)   --->   "%tmp_5_5_7 = mul nsw i32 %A_load_5, %B_load_7" [Mul/modified_algo(s2).c:16]   --->   Operation 405 'mul' 'tmp_5_5_7' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 406 [1/1] (8.47ns)   --->   "%tmp_5_6 = mul nsw i32 %A_load_6, %B_load" [Mul/modified_algo(s2).c:16]   --->   Operation 406 'mul' 'tmp_5_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 407 [1/1] (8.47ns)   --->   "%tmp_5_6_1 = mul nsw i32 %A_load_6, %B_load_1" [Mul/modified_algo(s2).c:16]   --->   Operation 407 'mul' 'tmp_5_6_1' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 408 [1/1] (8.47ns)   --->   "%tmp_5_6_2 = mul nsw i32 %A_load_6, %B_load_2" [Mul/modified_algo(s2).c:16]   --->   Operation 408 'mul' 'tmp_5_6_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 409 [1/1] (8.47ns)   --->   "%tmp_5_6_3 = mul nsw i32 %A_load_6, %B_load_3" [Mul/modified_algo(s2).c:16]   --->   Operation 409 'mul' 'tmp_5_6_3' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 410 [1/1] (8.47ns)   --->   "%tmp_5_6_4 = mul nsw i32 %A_load_6, %B_load_4" [Mul/modified_algo(s2).c:16]   --->   Operation 410 'mul' 'tmp_5_6_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 411 [1/1] (8.47ns)   --->   "%tmp_5_6_5 = mul nsw i32 %A_load_6, %B_load_5" [Mul/modified_algo(s2).c:16]   --->   Operation 411 'mul' 'tmp_5_6_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 412 [1/1] (8.47ns)   --->   "%tmp_5_6_6 = mul nsw i32 %A_load_6, %B_load_6" [Mul/modified_algo(s2).c:16]   --->   Operation 412 'mul' 'tmp_5_6_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 413 [1/1] (8.47ns)   --->   "%tmp_5_6_7 = mul nsw i32 %A_load_6, %B_load_7" [Mul/modified_algo(s2).c:16]   --->   Operation 413 'mul' 'tmp_5_6_7' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 414 [1/1] (8.47ns)   --->   "%tmp_5_7 = mul nsw i32 %A_load_7, %B_load" [Mul/modified_algo(s2).c:16]   --->   Operation 414 'mul' 'tmp_5_7' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 415 [1/1] (8.47ns)   --->   "%tmp_5_7_1 = mul nsw i32 %A_load_7, %B_load_1" [Mul/modified_algo(s2).c:16]   --->   Operation 415 'mul' 'tmp_5_7_1' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 416 [1/1] (8.47ns)   --->   "%tmp_5_7_2 = mul nsw i32 %A_load_7, %B_load_2" [Mul/modified_algo(s2).c:16]   --->   Operation 416 'mul' 'tmp_5_7_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 417 [1/1] (8.47ns)   --->   "%tmp_5_7_3 = mul nsw i32 %A_load_7, %B_load_3" [Mul/modified_algo(s2).c:16]   --->   Operation 417 'mul' 'tmp_5_7_3' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 418 [1/1] (8.47ns)   --->   "%tmp_5_7_4 = mul nsw i32 %A_load_7, %B_load_4" [Mul/modified_algo(s2).c:16]   --->   Operation 418 'mul' 'tmp_5_7_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 419 [1/1] (8.47ns)   --->   "%tmp_5_7_5 = mul nsw i32 %A_load_7, %B_load_5" [Mul/modified_algo(s2).c:16]   --->   Operation 419 'mul' 'tmp_5_7_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 420 [1/1] (8.47ns)   --->   "%tmp_5_7_6 = mul nsw i32 %A_load_7, %B_load_6" [Mul/modified_algo(s2).c:16]   --->   Operation 420 'mul' 'tmp_5_7_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 421 [1/1] (8.47ns)   --->   "%tmp_5_7_7 = mul nsw i32 %A_load_7, %B_load_7" [Mul/modified_algo(s2).c:16]   --->   Operation 421 'mul' 'tmp_5_7_7' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 5.95>
+ST_37 : Operation 422 [1/1] (2.70ns)   --->   "%tmp_6_0_6 = add nsw i32 %C_load_6, %tmp_5_0_6" [Mul/modified_algo(s2).c:16]   --->   Operation 422 'add' 'tmp_6_0_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 423 [1/1] (3.25ns)   --->   "store i32 %tmp_6_0_6, i32* %C_addr_6, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 423 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_37 : Operation 424 [1/1] (2.70ns)   --->   "%tmp_6_0_7 = add nsw i32 %C_load_7, %tmp_5_0_7" [Mul/modified_algo(s2).c:16]   --->   Operation 424 'add' 'tmp_6_0_7' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 425 [1/1] (3.25ns)   --->   "store i32 %tmp_6_0_7, i32* %C_addr_7, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 425 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_37 : Operation 426 [1/1] (2.70ns)   --->   "%tmp_6_1 = add nsw i32 %C_load_8, %tmp_5_1" [Mul/modified_algo(s2).c:16]   --->   Operation 426 'add' 'tmp_6_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 427 [1/1] (2.70ns)   --->   "%tmp_6_1_1 = add nsw i32 %C_load_9, %tmp_5_1_1" [Mul/modified_algo(s2).c:16]   --->   Operation 427 'add' 'tmp_6_1_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 428 [1/1] (2.70ns)   --->   "%tmp_6_1_2 = add nsw i32 %C_load_10, %tmp_5_1_2" [Mul/modified_algo(s2).c:16]   --->   Operation 428 'add' 'tmp_6_1_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 429 [1/1] (2.70ns)   --->   "%tmp_6_1_3 = add nsw i32 %C_load_11, %tmp_5_1_3" [Mul/modified_algo(s2).c:16]   --->   Operation 429 'add' 'tmp_6_1_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 430 [1/1] (2.70ns)   --->   "%tmp_6_1_4 = add nsw i32 %C_load_12, %tmp_5_1_4" [Mul/modified_algo(s2).c:16]   --->   Operation 430 'add' 'tmp_6_1_4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 431 [1/1] (2.70ns)   --->   "%tmp_6_1_5 = add nsw i32 %C_load_13, %tmp_5_1_5" [Mul/modified_algo(s2).c:16]   --->   Operation 431 'add' 'tmp_6_1_5' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 432 [1/1] (2.70ns)   --->   "%tmp_6_1_6 = add nsw i32 %C_load_14, %tmp_5_1_6" [Mul/modified_algo(s2).c:16]   --->   Operation 432 'add' 'tmp_6_1_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 433 [1/1] (2.70ns)   --->   "%tmp_6_1_7 = add nsw i32 %C_load_15, %tmp_5_1_7" [Mul/modified_algo(s2).c:16]   --->   Operation 433 'add' 'tmp_6_1_7' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 434 [1/1] (2.70ns)   --->   "%tmp_6_2 = add nsw i32 %C_load_16, %tmp_5_2" [Mul/modified_algo(s2).c:16]   --->   Operation 434 'add' 'tmp_6_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 435 [1/1] (2.70ns)   --->   "%tmp_6_2_1 = add nsw i32 %C_load_17, %tmp_5_2_1" [Mul/modified_algo(s2).c:16]   --->   Operation 435 'add' 'tmp_6_2_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 436 [1/1] (2.70ns)   --->   "%tmp_6_2_2 = add nsw i32 %C_load_18, %tmp_5_2_2" [Mul/modified_algo(s2).c:16]   --->   Operation 436 'add' 'tmp_6_2_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 437 [1/1] (2.70ns)   --->   "%tmp_6_2_3 = add nsw i32 %C_load_19, %tmp_5_2_3" [Mul/modified_algo(s2).c:16]   --->   Operation 437 'add' 'tmp_6_2_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 438 [1/1] (2.70ns)   --->   "%tmp_6_2_4 = add nsw i32 %C_load_20, %tmp_5_2_4" [Mul/modified_algo(s2).c:16]   --->   Operation 438 'add' 'tmp_6_2_4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 439 [1/1] (2.70ns)   --->   "%tmp_6_2_5 = add nsw i32 %C_load_21, %tmp_5_2_5" [Mul/modified_algo(s2).c:16]   --->   Operation 439 'add' 'tmp_6_2_5' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 440 [1/1] (2.70ns)   --->   "%tmp_6_2_6 = add nsw i32 %C_load_22, %tmp_5_2_6" [Mul/modified_algo(s2).c:16]   --->   Operation 440 'add' 'tmp_6_2_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 441 [1/1] (2.70ns)   --->   "%tmp_6_2_7 = add nsw i32 %C_load_23, %tmp_5_2_7" [Mul/modified_algo(s2).c:16]   --->   Operation 441 'add' 'tmp_6_2_7' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 442 [1/1] (2.70ns)   --->   "%tmp_6_3 = add nsw i32 %C_load_24, %tmp_5_3" [Mul/modified_algo(s2).c:16]   --->   Operation 442 'add' 'tmp_6_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 443 [1/1] (2.70ns)   --->   "%tmp_6_3_1 = add nsw i32 %C_load_25, %tmp_5_3_1" [Mul/modified_algo(s2).c:16]   --->   Operation 443 'add' 'tmp_6_3_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 444 [1/1] (2.70ns)   --->   "%tmp_6_3_2 = add nsw i32 %C_load_26, %tmp_5_3_2" [Mul/modified_algo(s2).c:16]   --->   Operation 444 'add' 'tmp_6_3_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 445 [1/1] (2.70ns)   --->   "%tmp_6_3_3 = add nsw i32 %C_load_27, %tmp_5_3_3" [Mul/modified_algo(s2).c:16]   --->   Operation 445 'add' 'tmp_6_3_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 446 [1/1] (2.70ns)   --->   "%tmp_6_3_4 = add nsw i32 %C_load_28, %tmp_5_3_4" [Mul/modified_algo(s2).c:16]   --->   Operation 446 'add' 'tmp_6_3_4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 447 [1/1] (2.70ns)   --->   "%tmp_6_3_5 = add nsw i32 %C_load_29, %tmp_5_3_5" [Mul/modified_algo(s2).c:16]   --->   Operation 447 'add' 'tmp_6_3_5' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 448 [1/1] (2.70ns)   --->   "%tmp_6_3_6 = add nsw i32 %C_load_30, %tmp_5_3_6" [Mul/modified_algo(s2).c:16]   --->   Operation 448 'add' 'tmp_6_3_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 449 [1/1] (2.70ns)   --->   "%tmp_6_3_7 = add nsw i32 %C_load_31, %tmp_5_3_7" [Mul/modified_algo(s2).c:16]   --->   Operation 449 'add' 'tmp_6_3_7' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 450 [1/1] (2.70ns)   --->   "%tmp_6_4 = add nsw i32 %C_load_32, %tmp_5_4" [Mul/modified_algo(s2).c:16]   --->   Operation 450 'add' 'tmp_6_4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 451 [1/1] (2.70ns)   --->   "%tmp_6_4_1 = add nsw i32 %C_load_33, %tmp_5_4_1" [Mul/modified_algo(s2).c:16]   --->   Operation 451 'add' 'tmp_6_4_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 452 [1/1] (2.70ns)   --->   "%tmp_6_4_2 = add nsw i32 %C_load_34, %tmp_5_4_2" [Mul/modified_algo(s2).c:16]   --->   Operation 452 'add' 'tmp_6_4_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 453 [1/1] (2.70ns)   --->   "%tmp_6_4_3 = add nsw i32 %C_load_35, %tmp_5_4_3" [Mul/modified_algo(s2).c:16]   --->   Operation 453 'add' 'tmp_6_4_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 454 [1/1] (2.70ns)   --->   "%tmp_6_4_4 = add nsw i32 %C_load_36, %tmp_5_4_4" [Mul/modified_algo(s2).c:16]   --->   Operation 454 'add' 'tmp_6_4_4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 455 [1/1] (2.70ns)   --->   "%tmp_6_4_5 = add nsw i32 %C_load_37, %tmp_5_4_5" [Mul/modified_algo(s2).c:16]   --->   Operation 455 'add' 'tmp_6_4_5' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 456 [1/1] (2.70ns)   --->   "%tmp_6_4_6 = add nsw i32 %C_load_38, %tmp_5_4_6" [Mul/modified_algo(s2).c:16]   --->   Operation 456 'add' 'tmp_6_4_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 457 [1/1] (2.70ns)   --->   "%tmp_6_4_7 = add nsw i32 %C_load_39, %tmp_5_4_7" [Mul/modified_algo(s2).c:16]   --->   Operation 457 'add' 'tmp_6_4_7' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 458 [1/1] (2.70ns)   --->   "%tmp_6_5 = add nsw i32 %C_load_40, %tmp_5_5" [Mul/modified_algo(s2).c:16]   --->   Operation 458 'add' 'tmp_6_5' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 459 [1/1] (2.70ns)   --->   "%tmp_6_5_1 = add nsw i32 %C_load_41, %tmp_5_5_1" [Mul/modified_algo(s2).c:16]   --->   Operation 459 'add' 'tmp_6_5_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 460 [1/1] (2.70ns)   --->   "%tmp_6_5_2 = add nsw i32 %C_load_42, %tmp_5_5_2" [Mul/modified_algo(s2).c:16]   --->   Operation 460 'add' 'tmp_6_5_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 461 [1/1] (2.70ns)   --->   "%tmp_6_5_3 = add nsw i32 %C_load_43, %tmp_5_5_3" [Mul/modified_algo(s2).c:16]   --->   Operation 461 'add' 'tmp_6_5_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 462 [1/1] (2.70ns)   --->   "%tmp_6_5_4 = add nsw i32 %C_load_44, %tmp_5_5_4" [Mul/modified_algo(s2).c:16]   --->   Operation 462 'add' 'tmp_6_5_4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 463 [1/1] (2.70ns)   --->   "%tmp_6_5_5 = add nsw i32 %C_load_45, %tmp_5_5_5" [Mul/modified_algo(s2).c:16]   --->   Operation 463 'add' 'tmp_6_5_5' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 464 [1/1] (2.70ns)   --->   "%tmp_6_5_6 = add nsw i32 %C_load_46, %tmp_5_5_6" [Mul/modified_algo(s2).c:16]   --->   Operation 464 'add' 'tmp_6_5_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 465 [1/1] (2.70ns)   --->   "%tmp_6_5_7 = add nsw i32 %C_load_47, %tmp_5_5_7" [Mul/modified_algo(s2).c:16]   --->   Operation 465 'add' 'tmp_6_5_7' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 466 [1/1] (2.70ns)   --->   "%tmp_6_6 = add nsw i32 %C_load_48, %tmp_5_6" [Mul/modified_algo(s2).c:16]   --->   Operation 466 'add' 'tmp_6_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 467 [1/1] (2.70ns)   --->   "%tmp_6_6_1 = add nsw i32 %C_load_49, %tmp_5_6_1" [Mul/modified_algo(s2).c:16]   --->   Operation 467 'add' 'tmp_6_6_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 468 [1/1] (2.70ns)   --->   "%tmp_6_6_2 = add nsw i32 %C_load_50, %tmp_5_6_2" [Mul/modified_algo(s2).c:16]   --->   Operation 468 'add' 'tmp_6_6_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 469 [1/1] (2.70ns)   --->   "%tmp_6_6_3 = add nsw i32 %C_load_51, %tmp_5_6_3" [Mul/modified_algo(s2).c:16]   --->   Operation 469 'add' 'tmp_6_6_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 470 [1/1] (2.70ns)   --->   "%tmp_6_6_4 = add nsw i32 %C_load_52, %tmp_5_6_4" [Mul/modified_algo(s2).c:16]   --->   Operation 470 'add' 'tmp_6_6_4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 471 [1/1] (2.70ns)   --->   "%tmp_6_6_5 = add nsw i32 %C_load_53, %tmp_5_6_5" [Mul/modified_algo(s2).c:16]   --->   Operation 471 'add' 'tmp_6_6_5' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 472 [1/1] (2.70ns)   --->   "%tmp_6_6_6 = add nsw i32 %C_load_54, %tmp_5_6_6" [Mul/modified_algo(s2).c:16]   --->   Operation 472 'add' 'tmp_6_6_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 473 [1/1] (2.70ns)   --->   "%tmp_6_6_7 = add nsw i32 %C_load_55, %tmp_5_6_7" [Mul/modified_algo(s2).c:16]   --->   Operation 473 'add' 'tmp_6_6_7' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 474 [1/1] (2.70ns)   --->   "%tmp_6_7 = add nsw i32 %C_load_56, %tmp_5_7" [Mul/modified_algo(s2).c:16]   --->   Operation 474 'add' 'tmp_6_7' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 475 [1/1] (2.70ns)   --->   "%tmp_6_7_1 = add nsw i32 %C_load_57, %tmp_5_7_1" [Mul/modified_algo(s2).c:16]   --->   Operation 475 'add' 'tmp_6_7_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 476 [1/1] (2.70ns)   --->   "%tmp_6_7_2 = add nsw i32 %C_load_58, %tmp_5_7_2" [Mul/modified_algo(s2).c:16]   --->   Operation 476 'add' 'tmp_6_7_2' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 477 [1/1] (2.70ns)   --->   "%tmp_6_7_3 = add nsw i32 %C_load_59, %tmp_5_7_3" [Mul/modified_algo(s2).c:16]   --->   Operation 477 'add' 'tmp_6_7_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 478 [1/1] (2.70ns)   --->   "%tmp_6_7_4 = add nsw i32 %C_load_60, %tmp_5_7_4" [Mul/modified_algo(s2).c:16]   --->   Operation 478 'add' 'tmp_6_7_4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 479 [1/1] (2.70ns)   --->   "%tmp_6_7_5 = add nsw i32 %C_load_61, %tmp_5_7_5" [Mul/modified_algo(s2).c:16]   --->   Operation 479 'add' 'tmp_6_7_5' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 480 [1/1] (2.70ns)   --->   "%tmp_6_7_6 = add nsw i32 %C_load_62, %tmp_5_7_6" [Mul/modified_algo(s2).c:16]   --->   Operation 480 'add' 'tmp_6_7_6' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 481 [1/1] (2.70ns)   --->   "%tmp_6_7_7 = add nsw i32 %C_load_63, %tmp_5_7_7" [Mul/modified_algo(s2).c:16]   --->   Operation 481 'add' 'tmp_6_7_7' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 3.25>
+ST_38 : Operation 482 [1/1] (3.25ns)   --->   "store i32 %tmp_6_1, i32* %C_addr_8, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 482 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_38 : Operation 483 [1/1] (3.25ns)   --->   "store i32 %tmp_6_1_1, i32* %C_addr_9, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 483 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 39 <SV = 38> <Delay = 3.25>
+ST_39 : Operation 484 [1/1] (3.25ns)   --->   "store i32 %tmp_6_1_2, i32* %C_addr_10, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 484 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_39 : Operation 485 [1/1] (3.25ns)   --->   "store i32 %tmp_6_1_3, i32* %C_addr_11, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 485 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 40 <SV = 39> <Delay = 3.25>
+ST_40 : Operation 486 [1/1] (3.25ns)   --->   "store i32 %tmp_6_1_4, i32* %C_addr_12, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 486 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_40 : Operation 487 [1/1] (3.25ns)   --->   "store i32 %tmp_6_1_5, i32* %C_addr_13, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 487 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 41 <SV = 40> <Delay = 3.25>
+ST_41 : Operation 488 [1/1] (3.25ns)   --->   "store i32 %tmp_6_1_6, i32* %C_addr_14, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 488 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_41 : Operation 489 [1/1] (3.25ns)   --->   "store i32 %tmp_6_1_7, i32* %C_addr_15, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 489 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 42 <SV = 41> <Delay = 3.25>
+ST_42 : Operation 490 [1/1] (3.25ns)   --->   "store i32 %tmp_6_2, i32* %C_addr_16, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 490 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_42 : Operation 491 [1/1] (3.25ns)   --->   "store i32 %tmp_6_2_1, i32* %C_addr_17, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 491 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 43 <SV = 42> <Delay = 3.25>
+ST_43 : Operation 492 [1/1] (3.25ns)   --->   "store i32 %tmp_6_2_2, i32* %C_addr_18, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 492 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_43 : Operation 493 [1/1] (3.25ns)   --->   "store i32 %tmp_6_2_3, i32* %C_addr_19, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 493 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 44 <SV = 43> <Delay = 3.25>
+ST_44 : Operation 494 [1/1] (3.25ns)   --->   "store i32 %tmp_6_2_4, i32* %C_addr_20, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 494 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_44 : Operation 495 [1/1] (3.25ns)   --->   "store i32 %tmp_6_2_5, i32* %C_addr_21, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 495 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 45 <SV = 44> <Delay = 3.25>
+ST_45 : Operation 496 [1/1] (3.25ns)   --->   "store i32 %tmp_6_2_6, i32* %C_addr_22, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 496 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_45 : Operation 497 [1/1] (3.25ns)   --->   "store i32 %tmp_6_2_7, i32* %C_addr_23, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 497 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 46 <SV = 45> <Delay = 3.25>
+ST_46 : Operation 498 [1/1] (3.25ns)   --->   "store i32 %tmp_6_3, i32* %C_addr_24, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 498 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_46 : Operation 499 [1/1] (3.25ns)   --->   "store i32 %tmp_6_3_1, i32* %C_addr_25, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 499 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 47 <SV = 46> <Delay = 3.25>
+ST_47 : Operation 500 [1/1] (3.25ns)   --->   "store i32 %tmp_6_3_2, i32* %C_addr_26, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 500 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_47 : Operation 501 [1/1] (3.25ns)   --->   "store i32 %tmp_6_3_3, i32* %C_addr_27, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 501 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 48 <SV = 47> <Delay = 3.25>
+ST_48 : Operation 502 [1/1] (3.25ns)   --->   "store i32 %tmp_6_3_4, i32* %C_addr_28, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 502 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_48 : Operation 503 [1/1] (3.25ns)   --->   "store i32 %tmp_6_3_5, i32* %C_addr_29, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 503 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 49 <SV = 48> <Delay = 3.25>
+ST_49 : Operation 504 [1/1] (3.25ns)   --->   "store i32 %tmp_6_3_6, i32* %C_addr_30, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 504 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_49 : Operation 505 [1/1] (3.25ns)   --->   "store i32 %tmp_6_3_7, i32* %C_addr_31, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 505 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 50 <SV = 49> <Delay = 3.25>
+ST_50 : Operation 506 [1/1] (3.25ns)   --->   "store i32 %tmp_6_4, i32* %C_addr_32, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 506 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_50 : Operation 507 [1/1] (3.25ns)   --->   "store i32 %tmp_6_4_1, i32* %C_addr_33, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 507 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 51 <SV = 50> <Delay = 3.25>
+ST_51 : Operation 508 [1/1] (3.25ns)   --->   "store i32 %tmp_6_4_2, i32* %C_addr_34, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 508 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_51 : Operation 509 [1/1] (3.25ns)   --->   "store i32 %tmp_6_4_3, i32* %C_addr_35, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 509 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 52 <SV = 51> <Delay = 3.25>
+ST_52 : Operation 510 [1/1] (3.25ns)   --->   "store i32 %tmp_6_4_4, i32* %C_addr_36, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 510 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_52 : Operation 511 [1/1] (3.25ns)   --->   "store i32 %tmp_6_4_5, i32* %C_addr_37, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 511 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 53 <SV = 52> <Delay = 3.25>
+ST_53 : Operation 512 [1/1] (3.25ns)   --->   "store i32 %tmp_6_4_6, i32* %C_addr_38, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 512 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_53 : Operation 513 [1/1] (3.25ns)   --->   "store i32 %tmp_6_4_7, i32* %C_addr_39, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 513 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 54 <SV = 53> <Delay = 3.25>
+ST_54 : Operation 514 [1/1] (3.25ns)   --->   "store i32 %tmp_6_5, i32* %C_addr_40, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 514 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_54 : Operation 515 [1/1] (3.25ns)   --->   "store i32 %tmp_6_5_1, i32* %C_addr_41, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 515 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 55 <SV = 54> <Delay = 3.25>
+ST_55 : Operation 516 [1/1] (3.25ns)   --->   "store i32 %tmp_6_5_2, i32* %C_addr_42, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 516 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_55 : Operation 517 [1/1] (3.25ns)   --->   "store i32 %tmp_6_5_3, i32* %C_addr_43, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 517 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 56 <SV = 55> <Delay = 3.25>
+ST_56 : Operation 518 [1/1] (3.25ns)   --->   "store i32 %tmp_6_5_4, i32* %C_addr_44, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 518 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_56 : Operation 519 [1/1] (3.25ns)   --->   "store i32 %tmp_6_5_5, i32* %C_addr_45, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 519 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 57 <SV = 56> <Delay = 3.25>
+ST_57 : Operation 520 [1/1] (3.25ns)   --->   "store i32 %tmp_6_5_6, i32* %C_addr_46, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 520 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_57 : Operation 521 [1/1] (3.25ns)   --->   "store i32 %tmp_6_5_7, i32* %C_addr_47, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 521 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 58 <SV = 57> <Delay = 3.25>
+ST_58 : Operation 522 [1/1] (3.25ns)   --->   "store i32 %tmp_6_6, i32* %C_addr_48, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 522 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_58 : Operation 523 [1/1] (3.25ns)   --->   "store i32 %tmp_6_6_1, i32* %C_addr_49, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 523 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 59 <SV = 58> <Delay = 3.25>
+ST_59 : Operation 524 [1/1] (3.25ns)   --->   "store i32 %tmp_6_6_2, i32* %C_addr_50, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 524 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_59 : Operation 525 [1/1] (3.25ns)   --->   "store i32 %tmp_6_6_3, i32* %C_addr_51, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 525 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 60 <SV = 59> <Delay = 3.25>
+ST_60 : Operation 526 [1/1] (3.25ns)   --->   "store i32 %tmp_6_6_4, i32* %C_addr_52, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 526 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_60 : Operation 527 [1/1] (3.25ns)   --->   "store i32 %tmp_6_6_5, i32* %C_addr_53, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 527 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 61 <SV = 60> <Delay = 3.25>
+ST_61 : Operation 528 [1/1] (3.25ns)   --->   "store i32 %tmp_6_6_6, i32* %C_addr_54, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 528 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_61 : Operation 529 [1/1] (3.25ns)   --->   "store i32 %tmp_6_6_7, i32* %C_addr_55, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 529 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 62 <SV = 61> <Delay = 3.25>
+ST_62 : Operation 530 [1/1] (3.25ns)   --->   "store i32 %tmp_6_7, i32* %C_addr_56, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 530 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_62 : Operation 531 [1/1] (3.25ns)   --->   "store i32 %tmp_6_7_1, i32* %C_addr_57, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 531 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 63 <SV = 62> <Delay = 3.25>
+ST_63 : Operation 532 [1/1] (3.25ns)   --->   "store i32 %tmp_6_7_2, i32* %C_addr_58, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 532 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_63 : Operation 533 [1/1] (3.25ns)   --->   "store i32 %tmp_6_7_3, i32* %C_addr_59, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 533 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 64 <SV = 63> <Delay = 3.25>
+ST_64 : Operation 534 [1/1] (3.25ns)   --->   "store i32 %tmp_6_7_4, i32* %C_addr_60, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 534 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_64 : Operation 535 [1/1] (3.25ns)   --->   "store i32 %tmp_6_7_5, i32* %C_addr_61, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 535 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+
+State 65 <SV = 64> <Delay = 3.25>
+ST_65 : Operation 536 [1/1] (3.25ns)   --->   "store i32 %tmp_6_7_6, i32* %C_addr_62, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 536 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_65 : Operation 537 [1/1] (3.25ns)   --->   "store i32 %tmp_6_7_7, i32* %C_addr_63, align 4" [Mul/modified_algo(s2).c:16]   --->   Operation 537 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 64> <RAM>
+ST_65 : Operation 538 [1/1] (0.00ns)   --->   "br label %1" [Mul/modified_algo(s2).c:7]   --->   Operation 538 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('k') with incoming values : ('k', Mul/modified_algo(s2).c:7) [74]  (1.66 ns)
+
+ <State 2>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load', Mul/modified_algo(s2).c:16) on array 'C' [128]  (3.26 ns)
+
+ <State 3>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load', Mul/modified_algo(s2).c:16) on array 'C' [128]  (3.26 ns)
+
+ <State 4>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_2', Mul/modified_algo(s2).c:16) on array 'C' [138]  (3.26 ns)
+
+ <State 5>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_4', Mul/modified_algo(s2).c:16) on array 'C' [148]  (3.26 ns)
+
+ <State 6>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_6', Mul/modified_algo(s2).c:16) on array 'C' [158]  (3.26 ns)
+
+ <State 7>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_8', Mul/modified_algo(s2).c:16) on array 'C' [168]  (3.26 ns)
+
+ <State 8>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_10', Mul/modified_algo(s2).c:16) on array 'C' [176]  (3.26 ns)
+
+ <State 9>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_12', Mul/modified_algo(s2).c:16) on array 'C' [184]  (3.26 ns)
+
+ <State 10>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_14', Mul/modified_algo(s2).c:16) on array 'C' [192]  (3.26 ns)
+
+ <State 11>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_16', Mul/modified_algo(s2).c:16) on array 'C' [201]  (3.26 ns)
+
+ <State 12>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_18', Mul/modified_algo(s2).c:16) on array 'C' [209]  (3.26 ns)
+
+ <State 13>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_20', Mul/modified_algo(s2).c:16) on array 'C' [217]  (3.26 ns)
+
+ <State 14>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_22', Mul/modified_algo(s2).c:16) on array 'C' [225]  (3.26 ns)
+
+ <State 15>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_24', Mul/modified_algo(s2).c:16) on array 'C' [234]  (3.26 ns)
+
+ <State 16>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_26', Mul/modified_algo(s2).c:16) on array 'C' [242]  (3.26 ns)
+
+ <State 17>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_28', Mul/modified_algo(s2).c:16) on array 'C' [250]  (3.26 ns)
+
+ <State 18>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_30', Mul/modified_algo(s2).c:16) on array 'C' [258]  (3.26 ns)
+
+ <State 19>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_32', Mul/modified_algo(s2).c:16) on array 'C' [267]  (3.26 ns)
+
+ <State 20>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_34', Mul/modified_algo(s2).c:16) on array 'C' [275]  (3.26 ns)
+
+ <State 21>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_36', Mul/modified_algo(s2).c:16) on array 'C' [283]  (3.26 ns)
+
+ <State 22>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_38', Mul/modified_algo(s2).c:16) on array 'C' [291]  (3.26 ns)
+
+ <State 23>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_40', Mul/modified_algo(s2).c:16) on array 'C' [300]  (3.26 ns)
+
+ <State 24>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_42', Mul/modified_algo(s2).c:16) on array 'C' [308]  (3.26 ns)
+
+ <State 25>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_44', Mul/modified_algo(s2).c:16) on array 'C' [316]  (3.26 ns)
+
+ <State 26>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_46', Mul/modified_algo(s2).c:16) on array 'C' [324]  (3.26 ns)
+
+ <State 27>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_48', Mul/modified_algo(s2).c:16) on array 'C' [333]  (3.26 ns)
+
+ <State 28>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_50', Mul/modified_algo(s2).c:16) on array 'C' [341]  (3.26 ns)
+
+ <State 29>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_52', Mul/modified_algo(s2).c:16) on array 'C' [349]  (3.26 ns)
+
+ <State 30>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('C_load_54', Mul/modified_algo(s2).c:16) on array 'C' [357]  (3.26 ns)
+
+ <State 31>: 4.38ns
+The critical path consists of the following:
+	'xor' operation ('tmp_1', Mul/modified_algo(s2).c:16) [83]  (1.12 ns)
+	'getelementptr' operation ('A_addr_1', Mul/modified_algo(s2).c:16) [85]  (0 ns)
+	'load' operation ('A_load_1', Mul/modified_algo(s2).c:16) on array 'A' [166]  (3.26 ns)
+
+ <State 32>: 3.26ns
+The critical path consists of the following:
+	'getelementptr' operation ('A_addr_2', Mul/modified_algo(s2).c:16) [87]  (0 ns)
+	'load' operation ('A_load_2', Mul/modified_algo(s2).c:16) on array 'A' [199]  (3.26 ns)
+
+ <State 33>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5', Mul/modified_algo(s2).c:16) [127]  (8.47 ns)
+
+ <State 34>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_0_2', Mul/modified_algo(s2).c:16) [137]  (8.47 ns)
+
+ <State 35>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_0_4', Mul/modified_algo(s2).c:16) [147]  (8.47 ns)
+
+ <State 36>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_0_6', Mul/modified_algo(s2).c:16) [157]  (8.47 ns)
+
+ <State 37>: 5.96ns
+The critical path consists of the following:
+	'add' operation ('tmp_6_0_6', Mul/modified_algo(s2).c:16) [159]  (2.7 ns)
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_0_6', Mul/modified_algo(s2).c:16 on array 'C' [160]  (3.26 ns)
+
+ <State 38>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_1', Mul/modified_algo(s2).c:16 on array 'C' [170]  (3.26 ns)
+
+ <State 39>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_1_2', Mul/modified_algo(s2).c:16 on array 'C' [178]  (3.26 ns)
+
+ <State 40>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_1_4', Mul/modified_algo(s2).c:16 on array 'C' [186]  (3.26 ns)
+
+ <State 41>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_1_6', Mul/modified_algo(s2).c:16 on array 'C' [194]  (3.26 ns)
+
+ <State 42>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_2', Mul/modified_algo(s2).c:16 on array 'C' [203]  (3.26 ns)
+
+ <State 43>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_2_2', Mul/modified_algo(s2).c:16 on array 'C' [211]  (3.26 ns)
+
+ <State 44>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_2_4', Mul/modified_algo(s2).c:16 on array 'C' [219]  (3.26 ns)
+
+ <State 45>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_2_6', Mul/modified_algo(s2).c:16 on array 'C' [227]  (3.26 ns)
+
+ <State 46>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_3', Mul/modified_algo(s2).c:16 on array 'C' [236]  (3.26 ns)
+
+ <State 47>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_3_2', Mul/modified_algo(s2).c:16 on array 'C' [244]  (3.26 ns)
+
+ <State 48>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_3_4', Mul/modified_algo(s2).c:16 on array 'C' [252]  (3.26 ns)
+
+ <State 49>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_3_6', Mul/modified_algo(s2).c:16 on array 'C' [260]  (3.26 ns)
+
+ <State 50>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_4', Mul/modified_algo(s2).c:16 on array 'C' [269]  (3.26 ns)
+
+ <State 51>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_4_2', Mul/modified_algo(s2).c:16 on array 'C' [277]  (3.26 ns)
+
+ <State 52>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_4_4', Mul/modified_algo(s2).c:16 on array 'C' [285]  (3.26 ns)
+
+ <State 53>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_4_6', Mul/modified_algo(s2).c:16 on array 'C' [293]  (3.26 ns)
+
+ <State 54>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_5', Mul/modified_algo(s2).c:16 on array 'C' [302]  (3.26 ns)
+
+ <State 55>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_5_2', Mul/modified_algo(s2).c:16 on array 'C' [310]  (3.26 ns)
+
+ <State 56>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_5_4', Mul/modified_algo(s2).c:16 on array 'C' [318]  (3.26 ns)
+
+ <State 57>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_5_6', Mul/modified_algo(s2).c:16 on array 'C' [326]  (3.26 ns)
+
+ <State 58>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_6', Mul/modified_algo(s2).c:16 on array 'C' [335]  (3.26 ns)
+
+ <State 59>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_6_2', Mul/modified_algo(s2).c:16 on array 'C' [343]  (3.26 ns)
+
+ <State 60>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_6_4', Mul/modified_algo(s2).c:16 on array 'C' [351]  (3.26 ns)
+
+ <State 61>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_6_6', Mul/modified_algo(s2).c:16 on array 'C' [359]  (3.26 ns)
+
+ <State 62>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_7', Mul/modified_algo(s2).c:16 on array 'C' [368]  (3.26 ns)
+
+ <State 63>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_7_2', Mul/modified_algo(s2).c:16 on array 'C' [376]  (3.26 ns)
+
+ <State 64>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_7_4', Mul/modified_algo(s2).c:16 on array 'C' [384]  (3.26 ns)
+
+ <State 65>: 3.26ns
+The critical path consists of the following:
+	'store' operation (Mul/modified_algo(s2).c:16) of variable 'tmp_6_7_6', Mul/modified_algo(s2).c:16 on array 'C' [392]  (3.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

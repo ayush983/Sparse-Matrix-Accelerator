@@ -1,0 +1,109 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'mul1'" level="0">
+<item name = "Date">Thu Feb  4 11:36:48 2021
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">Mul</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">aartix7</item>
+<item name = "Target device">xa7a12tcsg325-1q</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.470, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2112, 2112, 2112, 2112, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 2">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 3">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 4">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 5">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 6">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 7">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 8">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 9">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 10">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 11">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 12">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 13">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 14">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 15">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 16">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 17">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 18">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 19">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 20">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 21">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 22">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 23">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 24">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 25">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 26">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 27">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 28">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 29">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 30">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 31">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 32">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 33">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 34">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 35">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 36">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 37">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 38">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 39">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 40">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 41">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 42">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 43">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 44">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 45">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 46">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 47">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 48">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 49">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 50">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 51">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 52">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 53">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 54">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 55">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 56">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 57">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 58">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 59">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 60">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 61">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 62">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 63">32, 32, 4, -, -, 8, no</column>
+<column name="- Loop 64">32, 32, 4, -, -, 8, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
